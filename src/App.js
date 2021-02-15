@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import firebase from "firebase";
 
-function App() {
+export default function App() {
+  const firebaseApp = firebase.apps[0];
   return (
     <div className="App">
       <header className="App-header">
@@ -17,9 +19,13 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+        <code>
+          <pre>{JSON.stringify(firebaseApp.options, null, 2)}</pre>
+      </code>
+        </div>
+        
       </header>
     </div>
   );
 }
-
-export default App;
