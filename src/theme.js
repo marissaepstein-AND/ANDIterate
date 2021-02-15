@@ -35,16 +35,8 @@ const colors = {
   mediumGrey: "#5a5a5a",
   tabGrey: "#f4f4f4",
   backgroundGrey: "#fafafa",
-  linkBlue: "#3C65EC",
-  black: "#000000",
-  admin: "#1A66FA",
-  nonAdmin: "#F5C223",
-  transparent: "transparent",
-  error: "#FE5151",
-  yellow: "#f4c223",
-  lightYellow: "rgba(245, 194, 35, 0.27)",
-  inactive: "#cecece",
-  red: "#FF5252"
+  blue: "#2897FF  ",
+  red: "#FF323C"
 };
 
 export default {
