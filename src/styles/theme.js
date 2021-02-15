@@ -32,8 +32,8 @@ const colors = {
   secondaryPink: "#FF6ECF",
   secondaryPurple: "#A050FF",
   secondaryYellow: "#FFC800",
-  SecondaryOrange: "#FF7900",
-  SecondaryGreen: "#5AC328"
+  secondaryOrange: "#FF7900",
+  secondaryGreen: "#5AC328"
 };
 
 export default {

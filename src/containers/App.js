@@ -6,21 +6,24 @@ import '../styles/App.css';
 import firebase from "firebase";
 import theme from "../styles/theme"
 import Home from '../components/pages/Home'
-// import Menu from "../components/nav/Menu"
 import ScrumInfo from '../components/pages/ScrumInfo'
-
+import Menu from "../components/nav/Menu"
 import { ThemeProvider } from 'styled-components';
+
 const App = (props) =>{
+
   const firebaseApp = firebase.apps[0];
+
   return (
     <ThemeProvider theme={theme}>
     <HashRouter>
-      {/* <Menu /> */}
+      <Menu />
       <Switch>
-        <Route exact path="/" component={ScrumInfo} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </HashRouter>
 </ThemeProvider>
   );
 }
+
 export default App;
