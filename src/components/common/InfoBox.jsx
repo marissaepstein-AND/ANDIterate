@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 `;
 
 const TitleBox = styled.div`
-
+  border-radius: 16px 16px 0 0;
   ${props => props};
   
   
