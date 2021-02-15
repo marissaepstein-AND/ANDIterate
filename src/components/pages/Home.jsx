@@ -1,5 +1,5 @@
 import React from 'react'
-import { media } from "../../theme"
+import { media } from "../../styles/theme"
 import styled from "styled-components"
 import { Page } from "../common/Page"
 
