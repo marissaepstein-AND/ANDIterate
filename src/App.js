@@ -1,31 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useMemo } from 'react'
+// import ReactDOM from 'react-dom'
+import { Switch, Route, HashRouter } from 'react-router-dom'
+// import axios from 'axios'
 import firebase from "firebase";
+import Home from './components/pages/Home'
 
-export default function App() {
+const App = (props) =>{
+
   const firebaseApp = firebase.apps[0];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div>
-        <code>
-          <pre>{JSON.stringify(firebaseApp.options, null, 2)}</pre>
-      </code>
-        </div>
-        
-      </header>
-    </div>
+    <HashRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </HashRouter>
   );
 }
+
+export default App;
