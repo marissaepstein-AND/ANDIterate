@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../resources/logo.svg';
+import '../styles/App.css';
 import firebase from "firebase";
 
 export default function App() {
