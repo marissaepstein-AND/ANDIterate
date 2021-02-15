@@ -2,6 +2,9 @@ import React from 'react'
 import { media } from "../../styles/theme"
 import styled from "styled-components"
 import { Page } from "../common/Page"
+import InfoBox from "../common/InfoBox";
+import TeamMembers from '../common/TeamMembers';
+import TeamBox from "../common/TeamBox";
 
 
 const Title = styled.div`
@@ -10,7 +13,33 @@ const Title = styled.div`
 
 const Home = () => {
 
-    return <Page><Title>Hello</Title></Page>
+    //Create contents for the sprint goal info box
+    const sprintGoalProps ={
+        title: "Sprint goals",
+        body: 
+            <ul>
+                <li>Deliver MVP</li>
+                <li>Set up database</li>
+            </ul>,
+        style:{
+            wrapperStyle:{
+
+            },
+            titleStyle:{
+                backgroundColor:'#FF323C',
+            },
+            bodyStyle:{
+
+            }
+        }
+        
+    }
+
+    return <Page>
+      <Title>Hello</Title>
+      <InfoBox {...sprintGoalProps} />
+      <TeamBox />
+    </Page>
 }
 
 export default Home
