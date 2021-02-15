@@ -16,8 +16,8 @@ const Home = () => {
         title: "Sprint goals",
         body: 
             <ul>
-                <li>Set up </li>
-                <li></li>
+                <li>Deliver MVP</li>
+                <li>Set up database</li>
             </ul>,
         style:{
             wrapperStyle:{
