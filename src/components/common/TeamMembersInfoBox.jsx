@@ -15,21 +15,27 @@ const MemberImage = styled.img`
     border-radius: 50%;
     ${props => props};
 `
+
 const MemberRow = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    border-color: ${p => p.theme.colors.secondaryPurple};
-    box-shadow: 0 4px 2px -1px #c1c1c1;
-    border-radius: 20px;
     ${props => props};
 `
 const TitleBox = styled.div`
     font-size: 1rem;
-    background-color: ${p => p.theme.colors.secondaryPurple};
+    border-bottom: solid;
     border-radius: 16px 16px 0 0;
     padding: 0 1rem;
-    color: white;
+    color: ${p => p.theme.colors.secondaryPurple};
+    ${props => props};
+`
+
+const Wrapper = styled.div`
+    border-style: solid;
+    border-color: ${p => p.theme.colors.secondaryPurple};
+    box-shadow: 0 4px 2px -1px #c1c1c1;
+    border-radius: 20px;
     ${props => props};
 `
 /* STYLED COMPONENTS END */
@@ -50,14 +56,14 @@ const TeamMembersInfoBox = (props) => {
     const [members, setMembers] = useState(TeamMembers)
 
     return (
-        <div>
+        <Wrapper>
             <TitleBox><h1>Members of your Scrum Team</h1></TitleBox>
             <MemberRow>
                 {members.map(member => (
                     <MemberCard {...member} />
                 ))}
             </MemberRow>
-        </div>
+        </Wrapper>
     );
 }
 
