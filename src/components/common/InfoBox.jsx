@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { css } from "styled-components";
+import { Link, withRouter } from 'react-router-dom'
 
 const Wrapper = styled.div`
-  #background-color: #FF323C;
   box-shadow: 0 4px 2px -1px #c1c1c1;
   border-radius: 20px;
   width: 50%;
@@ -25,6 +25,13 @@ const BodyBox = styled.div`
   
 `;
 
+const Linker = styled(Link)`
+  color: ${p => p.theme.colors.primaryWhite};
+  padding: 1rem 1.5rem;
+  font-weight: ${p => p.theme.h1.fontWeight};
+  font-size: ${p => p.theme.h2.size};
+  text-decoration: none;
+`
 
 const InfoBox = (props) => {
 
