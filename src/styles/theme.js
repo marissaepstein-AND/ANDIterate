@@ -24,19 +24,16 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
 }, {});
 
 const colors = {
-  body: "#292D38",
-  seperator: "#F4F5F5",
-  white: "#FFFFFF",
-  label: "#B5B5B5",
-  lightestGrey: "#f7f7f7",
-  lightGrey: "#F5F5F4",
-  timeGrey: "#acacac",
-  grey: "#797979",
-  mediumGrey: "#5a5a5a",
-  tabGrey: "#f4f4f4",
-  backgroundGrey: "#fafafa",
-  blue: "#2897FF  ",
-  red: "#FF323C"
+  primaryRed: "#FF323C",
+  primaryBlue: "#2897FF",
+  primaryLightGrey: "#FF323C",
+  primaryDarkGrey: "#323232",
+  primaryWhite: "#FFFFFF",
+  secondaryPink: "#FF6ECF",
+  secondaryPurple: "#A050FF",
+  secondaryYellow: "#FFC800",
+  secondaryOrange: "#FF7900",
+  secondaryGreen: "#5AC328"
 };
 
 export default {

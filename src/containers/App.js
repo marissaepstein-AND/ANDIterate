@@ -4,9 +4,9 @@ import { Switch, Route, HashRouter } from 'react-router-dom'
 // import axios from 'axios'
 import '../styles/App.css';
 import firebase from "firebase";
-import theme from "../theme"
-
+import theme from "../styles/theme"
 import Home from '../components/pages/Home'
+import ScrumInfo from '../components/pages/ScrumInfo'
 import Menu from "../components/nav/Menu"
 import { ThemeProvider } from 'styled-components';
 

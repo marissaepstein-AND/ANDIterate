@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media } from "../../theme"
+import { media } from "../../styles/theme"
 
 
 const Ul = styled.ul`
@@ -16,7 +16,7 @@ const Ul = styled.ul`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: ${p => p.theme.colors.red};
+    background-color: ${p => p.theme.colors.primaryRed};
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
@@ -28,7 +28,7 @@ const Ul = styled.ul`
     transition: transform 0.3s ease-in-out;
 
     li {
-      color: #fff;
+      color: ${p => p.theme.colors.primaryWhite}
       padding: 1rem 0;
       font-size: ${p => p.theme.h1.size};
       width: 90%;

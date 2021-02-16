@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Burger from './Burger';
 
 const Nav = styled.nav`
+  background-color: ${p => p.theme.colors.primaryRed};
   width: 100%;
   border-bottom: 2px solid #f1f1f1;
   box-shadow: 0 4px 2px -2px ${p => p.theme.colors.lightestGrey};
@@ -13,7 +14,7 @@ const Nav = styled.nav`
 `
 
 const Logo = styled(Link)`
-  color: ${p => p.theme.colors.red};
+  color: ${p => p.theme.colors.primaryWhite};
   padding: 1rem 1.5rem;
   font-weight: ${p => p.theme.h1.fontWeight};
   font-size: ${p => p.theme.h2.size};
