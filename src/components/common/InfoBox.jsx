@@ -26,10 +26,7 @@ const BodyBox = styled.div`
 `;
 
 const Linker = styled(Link)`
-  color: ${p => p.theme.colors.primaryWhite};
   padding: 1rem 1.5rem;
-  font-weight: ${p => p.theme.h1.fontWeight};
-  font-size: ${p => p.theme.h2.size};
   text-decoration: none;
 `
 
@@ -39,6 +36,9 @@ const InfoBox = (props) => {
     <Wrapper {...props.style.wrapperStyle}>
       <TitleBox {...props.style.titleStyle}> <h1>{props.title}</h1> </TitleBox>
       <BodyBox {...props.style.bodyStyle}> {props.body} </BodyBox>
+      <Linker to={props.link}>
+        What is a {props.linkName}?
+      </Linker>
     </Wrapper>
   );
 }
