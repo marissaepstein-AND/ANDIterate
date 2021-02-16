@@ -1,5 +1,5 @@
 import React from 'react';
-import Teams from '../data/teams.js';
+import Teams from '../../resources/data/teams'
 import TeamMembers from './TeamMembers';
 
 export default function TeamBox() {
