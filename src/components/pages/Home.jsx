@@ -3,6 +3,8 @@ import { media } from "../../theme"
 import styled from "styled-components"
 import { Page } from "../common/Page"
 import InfoBox from "../common/InfoBox";
+import TeamMembers from '../common/TeamMembers';
+import TeamBox from "../common/TeamBox";
 
 
 const Title = styled.div`
@@ -40,6 +42,7 @@ const Home = () => {
 
     return <Page>
       <InfoBox {...sprintGoalProps} />
+      <TeamBox />
     </Page>
 }
 
