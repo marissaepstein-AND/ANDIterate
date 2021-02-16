@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
-import TeamMembers from '../data/teams'
+import TeamMembers from '../../resources/data/teams'
 
 /* STYLED COMPONENTS */
 const Card = styled.div`
