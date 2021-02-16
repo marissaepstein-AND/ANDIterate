@@ -1,16 +1,20 @@
 import React from 'react'
-import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from 'react-dom';
 import styled from "styled-components"
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 import theme from '../styles/theme';
 
-const Wrapper = styled.div`
+const SectionWrapper = styled.div`
 `
 
 const Heading = styled.h2`
     font-family: Poppins, sans-serif;
     color: ${p => p.theme.colors.primaryRed};
 `;
+
+const BoxWrapper = styled.div`
+    display: flex;
+    width: auto
+`
 
 const BoxContentWrapper = styled.div`
     padding: 15px;
@@ -44,19 +48,19 @@ const planningProps ={
         <List>
             <ListItem>8 hours max (for shorter Sprints the full 8 hours may not be necessary)</ListItem>
         </List>
-        <br></br>
+        <br/>
         <BoxSubtitle> Who’s involved?</BoxSubtitle>
         <List>
             <ListItem>Product Owner</ListItem>
             <ListItem>Scrum Master</ListItem>
             <ListItem>Developers</ListItem>
         </List>
-        <br></br>
+        <br/>
         <BoxSubtitle>When?</BoxSubtitle>
         <List>
             <ListItem>At the start of the Sprint</ListItem>
         </List>
-        <br></br>
+        <br/>
         <BoxSubtitle>What is it?</BoxSubtitle>
         <List>
             <ListItem>Asks why the Sprint is valuable and defines a Sprint Goal</ListItem>
@@ -65,9 +69,7 @@ const planningProps ={
             <ListItem>Product Owner clarifies the scope, requirements, and makes trade-offs</ListItem>
             <ListItem>Scrum Master ensures it takes place and takes the correct time</ListItem>
         </List>
-    </BoxContentWrapper>
-    
-,
+    </BoxContentWrapper>,
     style:{
         wrapperStyle:{
             borderStyle: 'solid',
@@ -83,12 +85,29 @@ const planningProps ={
 
 const dailyProps ={
     title: "Daily Scrum",
-    body: 
+    body: <BoxContentWrapper>     
+        <BoxSubtitle>Timebox:</BoxSubtitle>
         <List>
-            <ListItem>Code is peer reviewed</ListItem>
-            <ListItem>Code has been tested</ListItem>
-            <ListItem>End user documentation is ready</ListItem>
-        </List>,
+            <ListItem>15 Mins</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle> Who’s involved?</BoxSubtitle>
+        <List>
+            <ListItem>Scrum Master</ListItem>
+            <ListItem>Developers</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle>When?</BoxSubtitle>
+        <List>
+            <ListItem>Daily at the same time, in same place</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle>What is it?</BoxSubtitle>
+        <List>
+            <ListItem>Time to synchronise as a team and make plan for the next 24 hours in order to make progress towards the Sprint Goal</ListItem>
+            <ListItem>The work completed in the last 24 hours is reviewed - but this is not a status meeting</ListItem>
+        </List>
+    </BoxContentWrapper>,
     style:{
         wrapperStyle:{
             borderStyle: 'solid',
@@ -104,13 +123,33 @@ const dailyProps ={
 
 const reviewProps ={
     title: "Sprint Review",
-    body: 
-
+    body: <BoxContentWrapper>     
+        <BoxSubtitle>Timebox:</BoxSubtitle>
         <List>
-            <ListItem>Code is peer reviewed</ListItem>
-            <ListItem>Code has been tested</ListItem>
-            <ListItem>End user documentation is ready</ListItem>
-        </List>,
+            <ListItem>4 hours maximum (for shorter Sprints the full 4 hours may not be necessary)</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle> Who’s involved?</BoxSubtitle>
+        <List>
+            <ListItem>Product Owner</ListItem>
+            <ListItem>Scrum Master</ListItem>
+            <ListItem>Developers</ListItem>
+            <ListItem>Stakeholders</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle>When?</BoxSubtitle>
+        <List>
+            <ListItem>At the end of the Sprint, before Sprint Retro</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle>What is it?</BoxSubtitle>
+        <List>
+            <ListItem>A working product is demonstrated</ListItem>
+            <ListItem>The whole team works with the stakeholders to review the ‘done’ increment</ListItem>
+            <ListItem>The team demonstrate the work which has been done and answer any questions from stakeholders</ListItem>
+            <ListItem>Collaborate on adapting the Product Backlog to prioritise what work to do next</ListItem>
+        </List>
+    </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
             borderStyle: 'solid',
@@ -125,13 +164,33 @@ const reviewProps ={
 }
 
 const retroProps ={
-    title: "Sprint Retro",
-    body: 
+    title: "Sprint Retrospective",
+    body: <BoxContentWrapper>
+        <BoxSubtitle>Timebox:</BoxSubtitle>
         <List>
-            <ListItem>Code is peer reviewed</ListItem>
-            <ListItem>Code has been tested</ListItem>
-            <ListItem>End user documentation is ready</ListItem>
-        </List>,
+            <ListItem>3 hours max (for shorter Sprints the full 3 hours may not be necessary)</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle> Who’s involved?</BoxSubtitle>
+        <List>
+            <ListItem>Product Owner</ListItem>
+            <ListItem>Scrum Master</ListItem>
+            <ListItem>Developers</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle>When?</BoxSubtitle>
+        <List>
+            <ListItem>At the end of the sprint(After the Sprint Review and before the next Sprint Planning session)</ListItem>
+        </List>
+        <br/>
+        <BoxSubtitle>What is it?</BoxSubtitle>
+        <List>
+            <ListItem>Time to reflect on what was created and how it was created</ListItem>
+            <ListItem>Review the Definition of Ready and the Definition of Done</ListItem>
+            <ListItem>Identify what went well and improvements to make the next Sprint more effective and efficient</ListItem>
+            <ListItem>Scrum Master ensures that the meeting takes place in the timebox and encourages the team to improve</ListItem>
+        </List>
+    </BoxContentWrapper>,
     style:{
         wrapperStyle:{
             borderStyle: 'solid',
@@ -147,13 +206,15 @@ const retroProps ={
 
 const SprintCeremonies = (props) => {
 
-    return <Wrapper>
+    return <SectionWrapper>
         <Heading>Sprint Ceremonies</Heading>
-        <InfoBoxWithoutLink {...planningProps}/>
-        <InfoBoxWithoutLink {...dailyProps}/>
-        <InfoBoxWithoutLink {...reviewProps}/>
-        <InfoBoxWithoutLink {...retroProps}/>
-    </Wrapper>
+        <BoxWrapper>
+            <InfoBoxWithoutLink {...planningProps}/>
+            <InfoBoxWithoutLink {...dailyProps}/>
+            <InfoBoxWithoutLink {...reviewProps}/>
+            <InfoBoxWithoutLink {...retroProps}/>
+        </BoxWrapper>
+    </SectionWrapper>
 }
 
 export default SprintCeremonies
