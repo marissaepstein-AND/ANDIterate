@@ -35,10 +35,12 @@ const cardProps ={
   link:"www.google.com"
 }
 
-const RetroActionsCard = (props) => {
+const RetroActionsCard = ({info}) => {
 
+  const filteredInfo = info[1]
+  console.log(filteredInfo)
   return(
-    <InfoBox {...cardProps}/>
+    <InfoBox card={cardProps} info={filteredInfo} />
   );
 
 }

@@ -1,0 +1,12 @@
+[
+  {
+    "id":0,
+    "title":"Sprint planning",
+    "content":"This is what sprint planning is"
+  },
+  {
+    "id":1,
+    "title":"Sprint retro",
+    "content":"This is what a sprint retro is"
+  }
+]

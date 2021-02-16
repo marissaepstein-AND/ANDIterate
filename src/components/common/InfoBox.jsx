@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled, { css } from "styled-components";
 import { Link, withRouter } from 'react-router-dom'
+import { Modal } from './modal';
 
 const Wrapper = styled.div`
   box-shadow: 0 4px 2px -1px #c1c1c1;
@@ -30,16 +31,24 @@ const Linker = styled(Link)`
   text-decoration: none;
 `
 
-const InfoBox = (props) => {
+const InfoBox = ({card,info}) => {
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(prev => !prev)
+  }
+
 
   return (
-    <Wrapper {...props.style.wrapperStyle}>
-      <TitleBox {...props.style.titleStyle}> <h1>{props.title}</h1> </TitleBox>
-      <BodyBox {...props.style.bodyStyle}> {props.body} </BodyBox>
-      <Linker to={props.link}>
-        What is a {props.linkName}?
+    <Wrapper {...card.style.wrapperStyle}>
+      <TitleBox {...card.style.titleStyle}> <h1>{card.title}</h1> </TitleBox>
+      <BodyBox {...card.style.bodyStyle}> {card.body} </BodyBox>
+      <Linker onClick={openModal} >
+        What is a {card.linkName}?
       </Linker>
+      <Modal showModal={showModal} setShowModal={setShowModal} info={info} />
     </Wrapper>
+    
   );
 }
 export default InfoBox

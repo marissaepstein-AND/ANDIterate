@@ -10,6 +10,7 @@ import SprintGoalCard from "../common/cards/sprintGoalCard";
 import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
 import DorCard from '../common/cards/dorCard';
+import information from '../../resources/data/information.json'
 
 
 
@@ -17,15 +18,12 @@ import DorCard from '../common/cards/dorCard';
 const Home = () => {
 
     //Create contents for the sprint goal info box
+    const info = information
     
 
     return <Page>
     
-      <SprintGoalCard/>
-      <RetroActionsCard />
-      <DodCard />
-      <DorCard />
-      <EventBox />
+      <RetroActionsCard info={info}/>
 
       
     </Page>
