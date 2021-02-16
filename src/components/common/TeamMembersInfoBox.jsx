@@ -6,21 +6,31 @@ import TeamMembers from '../data/teams'
 const Card = styled.div`
     padding: 30px;
     text-align: center;
+    ${props => props};
 `
 
 const MemberImage = styled.img`
     height: 150px;
     width: 150px;
     border-radius: 50%;
+    ${props => props};
 `
 const MemberRow = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    border-style: solid;
-    border-radius: 20px;
     border-color: ${p => p.theme.colors.secondaryPurple};
-    border-width: 2px;
+    box-shadow: 0 4px 2px -1px #c1c1c1;
+    border-radius: 20px;
+    ${props => props};
+`
+const TitleBox = styled.div`
+    font-size: 1rem;
+    background-color: ${p => p.theme.colors.secondaryPurple};
+    border-radius: 16px 16px 0 0;
+    padding: 0 1rem;
+    color: white;
+    ${props => props};
 `
 /* STYLED COMPONENTS END */
 
@@ -40,11 +50,14 @@ const TeamMembersInfoBox = (props) => {
     const [members, setMembers] = useState(TeamMembers)
 
     return (
-        <MemberRow>
-            {members.map(member => (
-                <MemberCard {...member} />
-            ))}
-        </MemberRow>
+        <div>
+            <TitleBox><h1>Members of your Scrum Team</h1></TitleBox>
+            <MemberRow>
+                {members.map(member => (
+                    <MemberCard {...member} />
+                ))}
+            </MemberRow>
+        </div>
     );
 }
 
