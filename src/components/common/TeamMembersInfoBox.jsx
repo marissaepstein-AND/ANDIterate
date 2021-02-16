@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
-
+import TeamMembers from '../data/teams'
 /* STYLED COMPONENTS */
 const MemberRow = styled.div`
     display: flex;
@@ -27,56 +27,9 @@ const MemberCard = (m) => {
     );
 }
 const TeamMembersInfoBox = (props) => {
-
-    const [members, setNames] = useState([ 
-        { 
-            id: 1, 
-            name:'Jess Torri', 
-            role: 'Scrum Master',
-            email: 'jess.tori@and.digital',
-            imgurl: '../../assets/pigeon-placeholder-img.jpg' 
-        }, 
-        { 
-            id: 2,
-            name: 'Marissa Epstein',
-            role: 'Developer',
-            email: 'marissa.epstein@and.digital',
-            imgurl: '../../assets/pigeon-placeholder-img.jpg' 
-        }
-        , 
-        { 
-            id: 3,
-            name: 'Ryan Gilbert',
-            role: 'Developer',
-            email: 'ryan.gilbert@and.digital',
-            imgurl: '../../assets/pigeon-placeholder-img.jpg' 
-        },
-        {
-            id: 5,
-            name: 'Bronte Hampton',
-            role: 'Developer',
-            email: 'bronte.hampton@and.digital',
-            imgurl: '../../assets/pigeon-placeholder-img.jpg' 
-        },
-        { 
-            id: 1, 
-            name:'Yna Ramos', 
-            role: 'Developer',
-            email: 'yna.ramos@and.digital',
-            imgurl: '../../assets/pigeon-placeholder-img.jpg' 
-        }, 
-        {
-            id: 6,
-            name: 'Sam West',
-            role: 'Developer',
-            email: 'sam.west@and.digital',
-            imgurl: '../../assets/pigeon-placeholder-img.jpg' 
-        }
-    ]);
-
     return (
         <MemberRow>
-            {members.map(member => (
+            {TeamMembers.map(member => (
                 <MemberCard {...member} />
             ))}
         </MemberRow>

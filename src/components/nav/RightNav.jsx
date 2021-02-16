@@ -12,11 +12,12 @@ const Ul = styled.ul`
   li {
     padding: 0 1.5rem;
     font-weight: ${p => p.theme.h1.fontWeight};
+    color: white;
   }
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: ${p => p.theme.colors.primaryRed};
+    background-color: white;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
@@ -28,7 +29,7 @@ const Ul = styled.ul`
     transition: transform 0.3s ease-in-out;
 
     li {
-      color: ${p => p.theme.colors.primaryWhite}
+    color: ${p => p.theme.colors.primaryRed};
       padding: 1rem 0;
       font-size: ${p => p.theme.h1.size};
       width: 90%;
