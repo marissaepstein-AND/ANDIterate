@@ -11,7 +11,7 @@ const List = styled.ul`
     margin: 0 1rem;
 `
 const ListItem = styled.li`
-    background-color: #FFB2B3;
+    background-color: #2897FF;
     margin: 1rem 0;
     padding: 0.5rem;
     color: white;       
@@ -28,8 +28,14 @@ const cardProps ={
       </List>,
   style:{
       titleStyle:{
-          backgroundColor:'#FF323C',
-      }
+        //   backgroundColor:'#2897FF',
+          border: "solid 3px #2897FF",
+          borderBottom: 'none',
+          color: "#2897FF",
+        },
+        bodyStyle: {
+          border: "solid 3px #2897FF",
+        }
   },
   linkName:"Sprint retrospective",
   link:"www.google.com"
