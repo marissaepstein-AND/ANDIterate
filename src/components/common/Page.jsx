@@ -9,8 +9,7 @@ export const Page = styled.div`
     padding: 1rem;
     min-height: -webkit-fill-available;
 
-    ${media.tablet`
-    flex-direction: row;
-
-    `}
+    // ${media.tablet`
+    // flex-direction: column;
+    // `}
 `

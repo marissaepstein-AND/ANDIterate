@@ -9,6 +9,8 @@ import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
 import DorCard from '../common/cards/dorCard';
 import EventCard from "../common/cards/SprintEvent"
+import EventBox from "../common/EventBox"
+import EventCarousel from "../common/EventCarousel"
 
 const LeftContainer = styled.div`
     width: 100%;
@@ -29,7 +31,25 @@ const RightContainer = styled.div`
 `}
 `
 
-const Top = styled.div`
+const BottomContainer = styled.div`
+    width: 100%;
+    flex-direction: column; 
+
+    ${media.tablet`
+    flex-direction: row;
+`}
+`
+
+const TopSection = styled.div`
+    display: flex; 
+    flex-direction: column;
+
+    ${media.tablet`
+        flex-direction: row;
+    `}
+`
+
+const Container = styled.div`
     display: flex;
     flex-direction: column;
 
@@ -40,25 +60,34 @@ const Top = styled.div`
 
 
 
+
+
 const Home = () => {
 
     //Create contents for the sprint goal info box
 
     return <Page>
+        <TopSection>
         <LeftContainer>
+            <div>
+            <EventCarousel />
+            </div>
             <EventCard />
             <SprintGoalCard/>
         </LeftContainer>
         <RightContainer>
-            <Top>
+            {/* <Container> */}
             <DodCard />
             <DorCard />
-            </Top>
-
-            <RetroActionsCard />
-
+            {/* </Container> */}
       </RightContainer>
-      <TeamMembersInfoBox/>
+      </TopSection>
+        <BottomContainer>
+        <Container>
+            <TeamMembersInfoBox/>
+            <RetroActionsCard />
+        </Container>
+        </BottomContainer>
     </Page>
 }
 
