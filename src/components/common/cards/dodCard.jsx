@@ -35,7 +35,6 @@ const cardProps ={
         height: '100%',
         borderBottom: "solid 3px",
         borderColor: theme.colors.secondaryPink,
-
         color: theme.colors.secondaryPink,
       },
   },

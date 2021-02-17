@@ -24,7 +24,6 @@ const ListItem = styled.li`
     font-family: Roboto, sans-serif;
 `;
 
-
 const Sprints = (props) => {
 
     return <SectionWrapper>

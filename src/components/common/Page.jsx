@@ -11,7 +11,6 @@ export const Page = styled.div`
     width: -webkit-fill-available;
 
     ${media.tablet`
-    flex-direction: row;
-
+        flex-direction: row;
     `}
 `;
