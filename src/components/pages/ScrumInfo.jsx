@@ -1,8 +1,10 @@
 import React from 'react';
 import styled, {withTheme} from "styled-components";
 import { Page } from "../common/Page";
+import Sprints from "../../layouts/Sprints";
 import ScrumRoles from "../../layouts/ScrumRoles";
 import SprintCeremonies from "../../layouts/SprintCeremonies";
+import ScrumArtifacts from "../../layouts/ScrumArtifacts";
 import ScrumPillars from "../../layouts/ScrumPillars";
 import ScrumValues from "../../layouts/ScrumValues";
 
@@ -22,17 +24,15 @@ const Title = styled.div`
     font-weight: bold;
 `;
 
-const Heading = styled.h2`
-    color: ${p => p.theme.colors.primaryRed};
-`;
-
 const ScrumInfo = () => {
     
     return <Page>
         <ContentWrapper>
             <Title>Scrum Hints & Tips</Title>
+            <Sprints />
             <ScrumRoles />
             <SprintCeremonies />
+            <ScrumArtifacts />
             <ScrumPillars />
             <ScrumValues />
         </ContentWrapper>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 import theme from '../styles/theme';
+import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 
 const SectionWrapper = styled.div`
     padding: 2em;
@@ -33,6 +33,7 @@ const ListItem = styled.li`
     padding: 0;
     color: ${p => p.theme.colors.primaryDarkGrey};       
     font-family: Roboto, sans-serif;
+    font-size: 1em;
 `;
 
 const transparencyProps ={
@@ -83,7 +84,7 @@ const adaptionProps ={
     title: "Adaption",
     body: <BoxContentWrapper> 
         <List>
-            <ListItem>Adjusting a process as soon as possible to minimise any further issues or deviation from the goalt</ListItem>
+            <ListItem>Adjusting a process as soon as possible to minimise any further issues or deviation from the goal</ListItem>
         </List>
     </BoxContentWrapper>,    
     style:{
