@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import theme from '../styles/theme';
+import theme, { media } from '../styles/theme';
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 
 const SectionWrapper = styled.div`
@@ -15,9 +15,12 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto;
-`;
+    flex-direction: column;
 
+    ${media.mobileLarge`
+        flex-direction: row;
+    `} 
+`;
 const BoxContentWrapper = styled.div`
     padding: 15px;
 `;

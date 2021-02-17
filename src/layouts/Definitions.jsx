@@ -15,11 +15,15 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: 100%;
+    flex-direction: column;
 
-    ${media.mobileLarge`
+    ${media.tablet`
         flex-direction: row;
     `}
+
+    // ${media.mobileLarge`
+    //     flex-direction: row;
+    // `} 
 `;
 
 const BoxContentWrapper = styled.div`
