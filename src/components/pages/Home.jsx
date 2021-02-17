@@ -48,7 +48,6 @@ const HeaderWrapper = styled.div`
 const Title = styled.div`
     font-size: 4rem;
     color: ${p => p.theme.colors.primaryDarkGrey}; 
-    text-align: center;
     font-family: Poppins;
     font-weight: bold;
 `;
@@ -64,11 +63,12 @@ const Home = () => {
     //Create contents for the sprint goal info box
 
     return <Page>
+        
+        <LeftContainer>
         <HeaderWrapper>
             <Title>Agile ANDi's</Title>
             <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
         </HeaderWrapper>
-        <LeftContainer>
             <EventCard />
             <SprintGoalCard/>
             <TeamMembersInfoBox/>
