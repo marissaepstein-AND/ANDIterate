@@ -19,7 +19,8 @@ const App = (props) =>{
     <HashRouter>
       <Menu />
       <Switch>
-        <Route exact path="/" component={ScrumInfo} />
+        <Route exact path="/" component={Home} exact />
+        <Route exact path="/scrum-info" component={ScrumInfo} />
       </Switch>
     </HashRouter>
 </ThemeProvider>

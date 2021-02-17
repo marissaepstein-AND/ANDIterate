@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from "../../styles/theme";
 
@@ -35,12 +36,15 @@ const Ul = styled.ul`
     }
   }
 `;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`
 
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
-      <li>Scrum Hints & Tips</li>
+      <StyledLink to="/"><li>Home</li></StyledLink>
+      <StyledLink to="/scrum-info"><li>Scrum Info</li></StyledLink>
     </Ul>
   )
 }
