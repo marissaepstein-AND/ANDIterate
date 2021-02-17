@@ -8,7 +8,6 @@ const ModalWrapper = styled.div`
   width:600px;
   height:500px;
   box-shadow: 0 5px 16px #000000;
-  color: #000000;
   position:relative;
   z-index:10;
   border-radius:20px;
@@ -16,8 +15,8 @@ const ModalWrapper = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
-  color:#FF323C;
   position:absolute;
+  padding: 1%;
 `
 const CloseModalButton = styled(MdClose)`
   cursor:pointer;
