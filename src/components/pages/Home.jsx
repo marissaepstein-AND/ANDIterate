@@ -38,11 +38,37 @@ const Top = styled.div`
     `}
 `;
 
+const HeaderWrapper = styled.div`
+    display: flex; 
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: -webkit-fill-available;
+`;
+
+const Title = styled.div`
+    font-size: 4rem;
+    color: ${p => p.theme.colors.primaryDarkGrey}; 
+    text-align: center;
+    font-family: Poppins;
+    font-weight: bold;
+`;
+
+const SprintNo = styled.h2`
+    font-family: Poppins, sans-serif;
+    color: ${p => p.theme.colors.primaryDarkGrey};
+    font-size: 2em;
+`;
+
 const Home = () => {
 
     //Create contents for the sprint goal info box
 
     return <Page>
+        <HeaderWrapper>
+            <Title>Agile ANDi's</Title>
+            <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
+        </HeaderWrapper>
         <LeftContainer>
             <EventCard />
             <SprintGoalCard/>
