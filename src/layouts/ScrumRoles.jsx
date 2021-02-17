@@ -78,8 +78,7 @@ const scrumMasterProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{
@@ -103,8 +102,7 @@ const productOwnerProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
@@ -127,8 +125,7 @@ const developerProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{

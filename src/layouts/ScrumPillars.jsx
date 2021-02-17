@@ -51,8 +51,7 @@ const transparencyProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{
@@ -73,8 +72,7 @@ const inspectionProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
@@ -93,8 +91,7 @@ const adaptionProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{

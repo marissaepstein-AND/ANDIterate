@@ -89,8 +89,7 @@ const planningProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid  5px',
             borderColor: theme.colors.secondaryPink,
         },
         titleStyle:{
@@ -127,8 +126,7 @@ const dailyProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
@@ -169,8 +167,7 @@ const reviewProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryOrange,
         },
         titleStyle:{
@@ -210,8 +207,7 @@ const retroProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryPurple,
         },
         titleStyle:{

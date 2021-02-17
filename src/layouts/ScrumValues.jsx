@@ -42,8 +42,7 @@ const courageProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid  5px',
             borderColor: theme.colors.secondaryPink,
         },
         titleStyle:{
@@ -60,8 +59,7 @@ const focusProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid  5px',
             borderColor: theme.colors.secondaryPurple,
         },
         titleStyle:{
@@ -78,8 +76,7 @@ const commitmentProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid  5px',
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{
@@ -96,8 +93,7 @@ const respectProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid  5px',
             borderColor: theme.colors.secondaryOrange,
         },
         titleStyle:{
@@ -114,8 +110,7 @@ const openessProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid  5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
