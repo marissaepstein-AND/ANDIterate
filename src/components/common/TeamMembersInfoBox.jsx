@@ -11,10 +11,10 @@ const Card = styled.div`
 `;
 
 const MailButton = styled(MailOutlineIcon)`
-    border-color: ${props => props.theme.colors.secondaryOrange};
+    border-color: ${props => props.theme.colors.secondaryPurple};
     border-radius: 50%;
     border-style: solid;
-    color: ${props => props.theme.colors.secondaryOrange};
+    color: ${props => props.theme.colors.secondaryPurple};
     padding: 10px;
 `;
 
@@ -42,7 +42,7 @@ const MemberImage = styled.img`
 `;
 
 const MemberName = styled.h2`
-    background-color: ${p => p.theme.colors.secondaryOrange};
+    background-color: ${p => p.theme.colors.secondaryPurple};
     color: white;
     margin-top: 4px;
     padding: 0.5rem;
@@ -51,14 +51,14 @@ const MemberName = styled.h2`
 `;
 
 const MemberRole = styled.h4`
-    color: ${p => p.theme.colors.secondaryOrange};
+    color: ${p => p.theme.colors.secondaryPurple};
     font-family: Roboto, sans-serif;
 `;
 
 const TitleBox = styled.div`
     border-bottom: solid;
     border-radius: 16px 16px 0 0;
-    color: ${p => p.theme.colors.secondaryOrange};
+    color: ${p => p.theme.colors.secondaryPurple};
     font-size: 1rem;
     padding: 0 1rem;
     font-family: Poppins;
@@ -66,7 +66,7 @@ const TitleBox = styled.div`
 `;
 
 const Wrapper = styled.div`
-    border-color: ${p => p.theme.colors.secondaryOrange};
+    border-color: ${p => p.theme.colors.secondaryPurple};
     border-radius: 20px;
     border-style: solid;
     box-shadow: 0 4px 2px -1px #c1c1c1;
