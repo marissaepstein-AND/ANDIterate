@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { media } from "../../styles/theme"
+import { media } from "../../styles/theme";
 
 
 export const Page = styled.div`
@@ -9,7 +9,9 @@ export const Page = styled.div`
     padding: 1rem;
     min-height: -webkit-fill-available;
 
-    // ${media.tablet`
-    // flex-direction: column;
-    // `}
+
+    ${media.tablet`
+    flex-direction: row;
+
+    `}
 `

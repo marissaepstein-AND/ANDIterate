@@ -3,7 +3,7 @@ import { media } from "../../styles/theme"
 import styled from "styled-components"
 import TeamMembersInfoBox from "../common/TeamMembersInfoBox"
 import { Page } from "../common/Page"
-import InfoBox from "../common/InfoBox";
+// import InfoBox from "../common/InfoBox";
 import SprintGoalCard from "../common/cards/sprintGoalCard";
 import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
@@ -19,17 +19,17 @@ const LeftContainer = styled.div`
         width: 50%;
     `}
 
-`
+`;
 
 const RightContainer = styled.div`
     width: 100%; 
 
     ${media.tablet`
-     width: 50%;
-     display: flex; 
-     flex-direction: column;
-`}
-`
+        width: 50%;
+        display: flex; 
+        flex-direction: column;
+    `}
+`;
 
 const BottomContainer = styled.div`
     width: 100%;
@@ -56,9 +56,7 @@ const Container = styled.div`
     ${media.mobileLarge`
         flex-direction: row;
     `}
-`
-
-
+`;
 
 
 
@@ -67,28 +65,23 @@ const Home = () => {
     //Create contents for the sprint goal info box
 
     return <Page>
-        <TopSection>
+        {/* <TopSection> */}
         <LeftContainer>
             <div>
             <EventCarousel />
             </div>
             <EventCard />
-            <SprintGoalCard/>
+            <SprintGoalCard />
+            <TeamMembersInfoBox />
         </LeftContainer>
         <RightContainer>
-            {/* <Container> */}
-            <DodCard />
-            <DorCard />
-            {/* </Container> */}
-      </RightContainer>
-      </TopSection>
-        <BottomContainer>
-        <Container>
-            <TeamMembersInfoBox/>
+            {/* <Top> */}
+                <DodCard />
+                <DorCard />
+            {/* </Top> */}
             <RetroActionsCard />
-        </Container>
-        </BottomContainer>
+      </RightContainer>
     </Page>
 }
 
-export default Home
+export default Home;
