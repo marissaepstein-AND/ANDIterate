@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import theme from '../styles/theme';
+import theme, { media } from '../styles/theme';
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 
 const SectionWrapper = styled.div`
@@ -15,7 +15,11 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto;
+    flex-direction: column;
+
+    ${media.mobileLarge`
+        flex-direction: row;
+    `} 
 `;
 
 const BoxContentWrapper = styled.div`
@@ -47,8 +51,7 @@ const transparencyProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{
@@ -69,8 +72,7 @@ const inspectionProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
@@ -89,8 +91,7 @@ const adaptionProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{

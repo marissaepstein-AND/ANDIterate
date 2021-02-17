@@ -8,19 +8,29 @@ const Wrapper = styled.div`
   margin: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  // height: fit-content;
   ${props => props};
   
 `;
+
+// const TitleBox = styled.div`
+//   border-radius: 16px 16px 0 0;
+//   padding: 0 1rem;
+//   color: white;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   font-family: Poppins;
+//   ${props => props};
+// `;
 
 const TitleBox = styled.div`
   border-radius: 16px 16px 0 0;
   padding: 0 1rem;
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  font-family: Poppins;
+  ${p => p.theme.h1.fontWeight}
   ${props => props};
 `;
 

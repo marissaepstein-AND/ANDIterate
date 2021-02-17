@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from "styled-components";
 import Burger from './Burger';
@@ -11,6 +11,7 @@ const Nav = styled.nav`
   padding: 0;
   display: flex;
   justify-content: space-between;
+  position: fixed;
 `;
 
 const Logo = styled(Link)`

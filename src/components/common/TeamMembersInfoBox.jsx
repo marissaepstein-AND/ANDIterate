@@ -1,37 +1,35 @@
-import { white } from 'material-ui/styles/colors';
-import React, { useState, useEffect } from 'react';
-import Carousel from 'react-material-ui-carousel'
+import React, { useState} from 'react';
+import Carousel from 'react-material-ui-carousel';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import styled from 'styled-components'
-import TeamMembers from '../../resources/data/teams'
-import { SvgIcon } from 'material-ui';
-
-
+import styled from 'styled-components';
+import TeamMembers from '../../resources/data/teams';
 
 const Card = styled.div`
     padding: 20px;
     text-align: center;
     ${props => props};
-`
+`;
+
 const MailButton = styled(MailOutlineIcon)`
-    border-color: ${props => props.theme.colors.secondaryOrange};
+    border-color: ${props => props.theme.colors.secondaryPurple};
     border-radius: 50%;
     border-style: solid;
-    color: ${props => props.theme.colors.secondaryOrange};
+    color: ${props => props.theme.colors.secondaryPurple};
     padding: 10px;
-`
+`;
+
 const MemberDetailsRow = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     ${props => props};
-`
+`;
 
 const MemberDetails = styled.div`
     padding: 5px 20px 0px 0px;
     width: 45%;
-`
+`;
 
 const MemberImage = styled.img`
     border-radius: 20px;
@@ -41,42 +39,45 @@ const MemberImage = styled.img`
     object-fit: cover;
     width: 100%;
     ${props => props};
-`
+`;
+
 const MemberName = styled.h2`
-    background-color: ${p => p.theme.colors.secondaryOrange};
+    background-color: ${p => p.theme.colors.secondaryPurple};
     color: white;
     margin-top: 4px;
     padding: 0.5rem;
+    font-family: Roboto, sans-serif;
     ${props => props};
-`
+`;
 
 const MemberRole = styled.h4`
-    color: ${p => p.theme.colors.secondaryOrange};
-`
+    color: ${p => p.theme.colors.secondaryPurple};
+    font-family: Roboto, sans-serif;
+`;
 
 const TitleBox = styled.div`
     border-bottom: solid;
     border-radius: 16px 16px 0 0;
-    color: ${p => p.theme.colors.secondaryOrange};
+    color: ${p => p.theme.colors.secondaryPurple};
     font-size: 1rem;
     padding: 0 1rem;
+    font-family: Poppins;
     ${props => props};
 `;
 
 const Wrapper = styled.div`
-    border-color: ${p => p.theme.colors.secondaryOrange};
+    border-color: ${p => p.theme.colors.secondaryPurple};
     border-radius: 20px;
     border-style: solid;
     box-shadow: 0 4px 2px -1px #c1c1c1;
     margin: 1.5rem 1rem;
     ${props => props};
-`
-/* STYLED COMPONENTS END */
+`;
 
 const carouselProps = {
     "autoPlay" : false,
     "navButtonsAlwaysVisible" : true,
-}
+};
 
 const MemberCard = (m) => {
     const mailText = "Mail " + m.name
@@ -97,7 +98,7 @@ const MemberCard = (m) => {
 }
 
 const TeamMembersInfoBox = (props) => {
-    const [members, setMembers] = useState(TeamMembers)
+    const [members] = useState(TeamMembers)
 
     return (
         <Wrapper>
