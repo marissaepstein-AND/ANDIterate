@@ -49,7 +49,7 @@ const EventCarousel = () => {
 
     console.log(Events.items.map((event) => event.summary))
 
-    return <CarouselProvider naturalSlideWidth={100}  naturalSlideHeight={60} totalSlides={3} >
+    return <CarouselProvider naturalSlideWidth={100}  naturalSlideHeight={80} totalSlides={3} >
         <Slider style={{ boxShadow: '0 4px 2px -1px #c1c1c1', borderRadius: '1rem' }}>
             {Events.items.map((event) => {
                 return <Slide>

@@ -23,7 +23,7 @@ const SectionText = styled.p`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto
+    width: auto;
 `;
 
 const BoxContentWrapper = styled.div`
@@ -91,7 +91,7 @@ const planningProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryPink
+            color: theme.colors.secondaryPink,
         }
     },
 };
@@ -129,7 +129,7 @@ const dailyProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryGreen
+            color: theme.colors.secondaryGreen,
         }
     },
 };
@@ -171,7 +171,7 @@ const reviewProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryOrange
+            color: theme.colors.secondaryOrange,
         }
     },
 };
@@ -212,7 +212,7 @@ const retroProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryPurple
+            color: theme.colors.secondaryPurple,
         }
     },
 };

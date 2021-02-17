@@ -15,7 +15,7 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto
+    width: auto;
 `;
 
 const BoxContentWrapper = styled.div`
@@ -80,7 +80,7 @@ const commitmentProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryYellow
+            color: theme.colors.secondaryYellow,
         }
     },
 };
@@ -116,7 +116,7 @@ const openessProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryGreen
+            color: theme.colors.secondaryGreen,
         }
     },
 };

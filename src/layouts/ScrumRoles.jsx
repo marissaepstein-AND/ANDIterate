@@ -15,7 +15,7 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto
+    width: auto;
 `;
 
 const BoxContentWrapper = styled.div`
@@ -80,7 +80,7 @@ const scrumMasterProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.primaryBlue
+            color: theme.colors.primaryBlue,
         }
     },
 };
@@ -105,7 +105,7 @@ const productOwnerProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryGreen
+            color: theme.colors.secondaryGreen,
         }
     },
 };
@@ -129,7 +129,7 @@ const developerProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryYellow
+            color: theme.colors.secondaryYellow,
         }
     },
 };
