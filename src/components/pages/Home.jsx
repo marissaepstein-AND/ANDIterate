@@ -1,11 +1,9 @@
 import React from 'react'
 import { media } from "../../styles/theme"
 import styled from "styled-components"
+import TeamMembersInfoBox from "../common/TeamMembersInfoBox"
 import { Page } from "../common/Page"
 import InfoBox from "../common/InfoBox";
-import TeamMembers from '../common/TeamMembers';
-import TeamBox from "../common/TeamBox";
-import EventBox from "../common/EventBox";
 import SprintGoalCard from "../common/cards/sprintGoalCard";
 import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
@@ -60,7 +58,7 @@ const Home = () => {
             <RetroActionsCard />
 
       </RightContainer>
-      
+      <TeamMembersInfoBox/>
     </Page>
 }
 
