@@ -7,6 +7,8 @@ import SprintCeremonies from "../../layouts/SprintCeremonies";
 import ScrumArtifacts from "../../layouts/ScrumArtifacts";
 import ScrumPillars from "../../layouts/ScrumPillars";
 import ScrumValues from "../../layouts/ScrumValues";
+import Definitions from "../../layouts/Definitions";
+import UsefulScrumLinks from  "../../layouts/UsefulScrumLinks";
 
 const ContentWrapper = styled.div`
     display: flex; 
@@ -35,6 +37,8 @@ const ScrumInfo = () => {
             <ScrumArtifacts />
             <ScrumPillars />
             <ScrumValues />
+            <Definitions />
+            <UsefulScrumLinks />
         </ContentWrapper>
     </Page>
 }
