@@ -40,7 +40,10 @@ const Top = styled.div`
 
 
 
-const Home = () => {
+const Home = [
+    autoplay: false,
+    
+]
 
     //Create contents for the sprint goal info box
 
@@ -48,17 +51,15 @@ const Home = () => {
         <LeftContainer>
             <EventCard />
             <SprintGoalCard/>
+            <TeamMembersInfoBox/>
         </LeftContainer>
         <RightContainer>
             <Top>
-            <DodCard />
-            <DorCard />
+                <DodCard />
+                <DorCard />
             </Top>
-
             <RetroActionsCard />
-
       </RightContainer>
-      <TeamMembersInfoBox/>
     </Page>
 }
 
