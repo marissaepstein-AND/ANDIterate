@@ -39,10 +39,11 @@ const cardProps ={
       },
       bodyStyle: {
         border: "solid 3px #A050FF",
+      },
+      linkStyle: {
+        backgroundColor: 'grey'
       }
-  },
-  linkName:"Definition of Ready",
-  link:"www.google.com"
+  }
 }
 
 const DorCard = ({openModal}) => {

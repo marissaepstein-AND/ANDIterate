@@ -21,9 +21,6 @@ const cardProps ={
       },
       bodyStyle: {
         padding: '0.75rem',
-      },
-      linkStyle: {
-        backgroundColor: 'grey'
       }
     }
   
@@ -34,7 +31,7 @@ const cardProps ={
 const EventCard = (props) => {
 
   return(
-    <InfoBox {...cardProps}/>
+    <InfoBox card={cardProps}/>
   );
 
 }

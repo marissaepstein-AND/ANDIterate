@@ -14,7 +14,7 @@ const ModalWrapper = styled.div`
   background-color: #FFFFFF;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  
   position:absolute;
   padding: 1%;
 `
@@ -29,15 +29,42 @@ const CloseModalButton = styled(MdClose)`
 
 `
 
-const Modal = ({showModal, setShowModal,info}) => {
+const generateBody = (content) => {
+  var final = []
+  content.map(function(each){
+    final.push(<h2>{each.header}</h2>)
+      each.items.map(function(item){
+        final.push(<li>{item}</li>)
+      })
+    
+  })
+  return final
+}
 
+const Modal = ({showModal, setShowModal,info}) => {
+  
+
+  var body = ""
+  // if(info != null){
+    
+  //   info.content.forEach(function (x,index){
+  //     body.concat(x.header + "<ul>")
+  //     console.log(body)
+  //     x.items.forEach(function (y,index){
+  //       body.concat("<li>" + x.items[y] + "</li>")
+  //     })
+  //     body.concat("</ul>")
+  //   })
+  //   console.log(body)
+  // }
+  
   return(
     <div>
       {showModal ? (
         
           <ModalWrapper showModal={showModal}>
               <h1>{info.title}</h1>
-              <p>{info.content}</p>
+              {generateBody(info.content)}
             <CloseModalButton aria-label='Close modal' onClick={() => setShowModal(prev => !prev)} />
           </ModalWrapper>
         

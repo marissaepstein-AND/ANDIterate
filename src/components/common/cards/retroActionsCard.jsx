@@ -35,10 +35,11 @@ const cardProps ={
         },
         bodyStyle: {
           border: "solid 3px #2897FF",
+        },
+        linkStyle: {
+            backgroundColor: 'grey'
         }
-  },
-  linkName:"Sprint retrospective",
-  link:"www.google.com"
+    }
 }
 
 

@@ -34,10 +34,11 @@ const cardProps ={
       },
       bodyStyle: {
         border: "solid 3px #FF323C",
+      },
+      linkStyle: {
+        backgroundColor: 'grey'
       }
-  },
-  linkName:"Sprint goal",
-  link:"www.google.com"
+  }
 }
 
 const SprintGoalCard = ({openModal}) => {

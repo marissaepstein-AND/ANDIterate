@@ -38,10 +38,11 @@ const cardProps ={
       },
       bodyStyle: {
         border: "solid 3px #A050FF",
+      },
+      linkStyle: {
+        backgroundColor: 'grey'
       }
-  },
-  linkName:"Definition of Done",
-  link:"www.google.com"
+  }
 }
 
 const DodCard = ({openModal}) => {

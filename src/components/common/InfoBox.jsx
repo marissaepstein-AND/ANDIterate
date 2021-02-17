@@ -61,9 +61,7 @@ const InfoBox = ({card,action}) => {
     <Wrapper {...card.style.wrapperStyle}>
       <TitleBox {...card.style.titleStyle}> 
       <h1>{card.title}</h1> 
-      {/* <Linker to={props.link} {...props.style.linkStyle}>
-        ?
-      </Linker> */}
+      
       </TitleBox>
       <BodyBox {...card.style.bodyStyle}> {card.body}   
       <BottomContainer>
