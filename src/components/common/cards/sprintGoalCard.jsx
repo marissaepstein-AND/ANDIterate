@@ -4,7 +4,7 @@ import theme from '../../../styles/theme';
 import InfoBox from "../InfoBox";
 
 const List = styled.ul`
-    list-style: dash;
+    list-style: none;
     padding: 0;
     margin: 0 1rem;
 `;
