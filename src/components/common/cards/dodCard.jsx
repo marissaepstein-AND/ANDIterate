@@ -11,7 +11,7 @@ const List = styled.ul`
     margin: 0 1rem;
 `
 const ListItem = styled.li`
-    background-color: #FFB2B3;
+    background-color: #A050FF;
     margin: 1rem 0;
     padding: 0.5rem;
     color: white;       
@@ -27,8 +27,17 @@ const cardProps ={
           <ListItem>End user documentation is ready</ListItem>
       </List>,
   style:{
+    // wrapperStyle: {
+    //   height: '90%'
+    // },
       titleStyle:{
-          backgroundColor:'#FF323C',
+        height: '100%',
+        border: "solid 3px #A050FF",
+        borderBottom: 'none',
+        color: "#A050FF",
+      },
+      bodyStyle: {
+        border: "solid 3px #A050FF",
       }
   },
   linkName:"Definition of Done",

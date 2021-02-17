@@ -11,7 +11,7 @@ const List = styled.ul`
     margin: 0 1rem;
 `
 const ListItem = styled.li`
-    background-color: #FFB2B3;
+    background-color: #FF323C;
     margin: 1rem 0;
     padding: 0.5rem;
     color: white;       
@@ -27,7 +27,13 @@ const cardProps ={
       </List>,
   style:{
       titleStyle:{
-          backgroundColor:'#FF323C',
+        //   backgroundColor:'#FF323C',
+        border: "solid 3px #FF323C",
+        borderBottom: 'none',
+        color: "#FF323C",
+      },
+      bodyStyle: {
+        border: "solid 3px #FF323C",
       }
   },
   linkName:"Sprint goal",
