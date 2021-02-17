@@ -75,8 +75,8 @@ const Home = () => {
         </LeftContainer>
         <RightContainer>
             <Top>
-                <DodCard />
                 <DorCard />
+                <DodCard />
             </Top>
             <RetroActionsCard />
       </RightContainer>

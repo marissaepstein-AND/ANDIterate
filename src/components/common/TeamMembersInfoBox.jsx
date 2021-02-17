@@ -46,11 +46,13 @@ const MemberName = styled.h2`
     color: white;
     margin-top: 4px;
     padding: 0.5rem;
+    font-family: Roboto, sans-serif;
     ${props => props};
 `;
 
 const MemberRole = styled.h4`
     color: ${p => p.theme.colors.secondaryOrange};
+    font-family: Roboto, sans-serif;
 `;
 
 const TitleBox = styled.div`
@@ -59,6 +61,7 @@ const TitleBox = styled.div`
     color: ${p => p.theme.colors.secondaryOrange};
     font-size: 1rem;
     padding: 0 1rem;
+    font-family: Poppins;
     ${props => props};
 `;
 
