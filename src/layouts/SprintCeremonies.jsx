@@ -4,11 +4,13 @@ import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 import theme from '../styles/theme';
 
 const SectionWrapper = styled.div`
+    padding: 2em;
 `
 
 const Heading = styled.h2`
     font-family: Poppins, sans-serif;
     color: ${p => p.theme.colors.primaryRed};
+    font-size: 2em;
 `;
 
 const BoxWrapper = styled.div`
