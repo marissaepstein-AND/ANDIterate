@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { media } from "../../styles/theme"
+import { media } from "../../styles/theme";
 
 
 export const Page = styled.div`
@@ -13,4 +13,4 @@ export const Page = styled.div`
     flex-direction: row;
 
     `}
-`
+`;

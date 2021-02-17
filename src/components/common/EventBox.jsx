@@ -1,5 +1,5 @@
 import React from 'react';
-import Events from '../../resources/data/events.json'
+import Events from '../../resources/data/events.json';
 import IncommingEvents from './IncommingEvents';
 
 export default function TeamBox() {

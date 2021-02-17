@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media } from "../../styles/theme"
-
+import { media } from "../../styles/theme";
 
 const Ul = styled.ul`
   list-style: none;
@@ -46,4 +45,4 @@ const RightNav = ({ open }) => {
   )
 }
 
-export default RightNav
+export default RightNav;
