@@ -40,10 +40,7 @@ const Top = styled.div`
 
 
 
-const Home = [
-    autoplay: false,
-    
-]
+const Home = () => {
 
     //Create contents for the sprint goal info box
 

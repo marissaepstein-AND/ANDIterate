@@ -12,8 +12,12 @@ const Card = styled.div`
     text-align: center;
     ${props => props};
 `
-const MailButton = styled.button`
-    border-color: ${props => props.theme.colors.secondaryPurple}
+const MailButton = styled(MailOutlineIcon)`
+    border-color: ${props => props.theme.colors.secondaryOrange};
+    border-radius: 50%;
+    border-style: solid;
+    color: ${props => props.theme.colors.secondaryOrange};
+    padding: 10px;
 `
 const MemberDetailsRow = styled.div`
     display: flex;
@@ -24,39 +28,41 @@ const MemberDetailsRow = styled.div`
 `
 
 const MemberDetails = styled.div`
-    padding: 5px 20px 10px 10px;
+    padding: 5px 20px 0px 0px;
+    width: 45%;
 `
 
 const MemberImage = styled.img`
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    border-radius: 20px;
+    height: auto;
+    max-width: 300px;
+    object-fit: cover;
+    width: 100%;
     ${props => props};
 `
 const MemberName = styled.h2`
-    background-color: ${p => p.theme.colors.secondaryPurple};
+    background-color: ${p => p.theme.colors.secondaryOrange};
     color: white;
-    margin: 1rem 0;
+    margin-top: 4px;
     padding: 0.5rem;
     ${props => props};
 `
 
 const MemberRole = styled.h4`
-    color: ${p => p.theme.colors.secondaryPurple};
-    
+    color: ${p => p.theme.colors.secondaryOrange};
 `
 
 const TitleBox = styled.div`
     border-bottom: solid;
     border-radius: 16px 16px 0 0;
-    color: ${p => p.theme.colors.secondaryPurple};
+    color: ${p => p.theme.colors.secondaryOrange};
     font-size: 1rem;
     padding: 0 1rem;
     ${props => props};
 `
 
 const Wrapper = styled.div`
-    border-color: ${p => p.theme.colors.secondaryPurple};
+    border-color: ${p => p.theme.colors.secondaryOrange};
     border-radius: 20px;
     border-style: solid;
     box-shadow: 0 4px 2px -1px #c1c1c1;
@@ -81,7 +87,7 @@ const MemberCard = (m) => {
                 <MemberDetails>
                     <MemberName>{m.name}</MemberName>
                     <MemberRole>{m.role}</MemberRole>
-                    <a title={mailText} href={"mailto:" + m.email} target="_blank"><MailOutlineIcon></MailOutlineIcon></a>
+                    <a title={mailText} href={"mailto:" + m.email} alt={mailText}><MailButton></MailButton></a>
                 </MemberDetails>
             </MemberDetailsRow>
         </Card>
