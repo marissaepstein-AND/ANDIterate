@@ -1,26 +1,46 @@
-import React from 'react'
-import styled, {withTheme} from "styled-components"
-import { Page } from "../common/Page"
-import { getCompilerHooks } from 'webpack-manifest-plugin'
+import React from 'react';
+import styled, {withTheme} from "styled-components";
+import { Page } from "../common/Page";
+import Sprints from "../../layouts/Sprints";
+import ScrumRoles from "../../layouts/ScrumRoles";
+import SprintCeremonies from "../../layouts/SprintCeremonies";
+import ScrumArtifacts from "../../layouts/ScrumArtifacts";
+import ScrumPillars from "../../layouts/ScrumPillars";
+import ScrumValues from "../../layouts/ScrumValues";
+import Definitions from "../../layouts/Definitions";
+import UsefulScrumLinks from  "../../layouts/UsefulScrumLinks";
 
+const ContentWrapper = styled.div`
+    display: flex; 
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: -webkit-fill-available;
+`;
 
 const Title = styled.div`
-    font-size: 2rem;
+    font-size: 4rem;
     color: ${p => p.theme.colors.primaryBlue}; 
-`
-
-const Heading = styled.h2`
-    color: ${p => p.theme.colors.primaryRed};
+    text-align: center;
+    font-family: Poppins;
+    font-weight: bold;
 `;
 
 const ScrumInfo = () => {
     
     return <Page>
-        <Title>Scrum Hints & Tips</Title>
-        <Heading>What is a sprint?</Heading>
-        <Heading>Who is on a scrum team?</Heading>
-        <Heading>Sprint Ceremonies </Heading>
-        </Page>
+        <ContentWrapper>
+            <Title>Scrum Hints & Tips</Title>
+            <Sprints />
+            <ScrumRoles />
+            <SprintCeremonies />
+            <ScrumArtifacts />
+            <ScrumPillars />
+            <ScrumValues />
+            <Definitions />
+            <UsefulScrumLinks />
+        </ContentWrapper>
+    </Page>
 }
 
-export default withTheme(ScrumInfo)
+export default withTheme(ScrumInfo);

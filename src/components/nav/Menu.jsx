@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Link, withRouter } from 'react-router-dom'
-import styled from "styled-components"
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import styled from "styled-components";
 import Burger from './Burger';
 
 const Nav = styled.nav`
@@ -11,7 +11,7 @@ const Nav = styled.nav`
   padding: 0;
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const Logo = styled(Link)`
   color: ${p => p.theme.colors.primaryWhite};
@@ -19,7 +19,7 @@ const Logo = styled(Link)`
   font-weight: ${p => p.theme.h1.fontWeight};
   font-size: ${p => p.theme.h2.size};
   text-decoration: none;
-`
+`;
  
 const Menu = () => {
   return (
@@ -32,5 +32,4 @@ const Menu = () => {
   )
 }
 
-
-export default withRouter(Menu)
+export default withRouter(Menu);

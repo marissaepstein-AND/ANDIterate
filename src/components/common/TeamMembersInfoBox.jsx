@@ -6,7 +6,6 @@ import styled from 'styled-components'
 import TeamMembers from '../../resources/data/teams'
 import { SvgIcon } from 'material-ui';
 
-/* STYLED COMPONENTS */
 const Card = styled.div`
     padding: 20px;
     text-align: center;
@@ -59,7 +58,7 @@ const TitleBox = styled.div`
     font-size: 1rem;
     padding: 0 1rem;
     ${props => props};
-`
+`;
 
 const Wrapper = styled.div`
     border-color: ${p => p.theme.colors.secondaryOrange};
@@ -93,6 +92,7 @@ const MemberCard = (m) => {
         </Card>
     );
 }
+
 const TeamMembersInfoBox = (props) => {
     const [members, setMembers] = useState(TeamMembers)
 
@@ -108,4 +108,4 @@ const TeamMembersInfoBox = (props) => {
     );
 }
 
-export default TeamMembersInfoBox
+export default TeamMembersInfoBox;

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import styled, { css } from "styled-components";
-import { Link, withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom';
 
 const Wrapper = styled.div`
   box-shadow: 0 4px 2px -1px #c1c1c1;
@@ -38,13 +38,13 @@ const Linker = styled(Link)`
   margin: 1rem 1rem 0;
   color: black;
   height: fit-content;
-`
+`;
 
 const BottomContainer = styled.div`
   width: 100%; 
   margin-top: 2rem; 
   text-align: right;
-`
+`;
 
 const InfoBox = (props) => {
 
@@ -67,4 +67,5 @@ const InfoBox = (props) => {
     </Wrapper>
   );
 }
-export default InfoBox
+
+export default InfoBox;
