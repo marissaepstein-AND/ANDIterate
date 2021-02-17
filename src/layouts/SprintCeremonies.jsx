@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from "styled-components";
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 import theme from '../styles/theme';
 
 const SectionWrapper = styled.div`
     padding: 2em;
-`
+`;
 
 const Heading = styled.h2`
     font-family: Poppins, sans-serif;
@@ -16,7 +16,7 @@ const Heading = styled.h2`
 const BoxWrapper = styled.div`
     display: flex;
     width: auto
-`
+`;
 
 const BoxContentWrapper = styled.div`
     padding: 15px;
@@ -29,19 +29,19 @@ const BoxSubtitle = styled.p`
     font-style: italic;
     padding: 0;
     margin: 0;
-` 
+` ;
 
 const List = styled.ul`
     list-style: dash;
     padding: 0.25rem;
     margin: 0 1rem;
-`
+`;
 const ListItem = styled.li`
     margin: 1rem 0;
     padding: 0;
     color: ${p => p.theme.colors.primaryDarkGrey};       
     font-family: Roboto, sans-serif;
-`
+`;
 
 const planningProps ={
     title: "Sprint Planning",
@@ -83,7 +83,7 @@ const planningProps ={
             color: theme.colors.secondaryPink
         }
     },
-}
+};
 
 const dailyProps ={
     title: "Daily Scrum",
@@ -121,7 +121,7 @@ const dailyProps ={
             color: theme.colors.secondaryGreen
         }
     },
-} 
+};
 
 const reviewProps ={
     title: "Sprint Review",
@@ -163,7 +163,7 @@ const reviewProps ={
             color: theme.colors.secondaryOrange
         }
     },
-}
+};
 
 const retroProps ={
     title: "Sprint Retrospective",
@@ -204,7 +204,7 @@ const retroProps ={
             color: theme.colors.secondaryPurple
         }
     },
-}
+};
 
 const SprintCeremonies = (props) => {
 
@@ -219,4 +219,4 @@ const SprintCeremonies = (props) => {
     </SectionWrapper>
 }
 
-export default SprintCeremonies
+export default SprintCeremonies;

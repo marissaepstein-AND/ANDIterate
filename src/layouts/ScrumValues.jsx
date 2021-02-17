@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from "styled-components";
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 import theme from '../styles/theme';
 
 const SectionWrapper = styled.div`
     padding: 2em;
-`
+`;
 
 const Heading = styled.h2`
     font-family: Poppins, sans-serif;
@@ -16,23 +16,24 @@ const Heading = styled.h2`
 const BoxWrapper = styled.div`
     display: flex;
     width: auto
-`
+`;
 
 const BoxContentWrapper = styled.div`
     padding: 15px;
-`
+`;
 
 const List = styled.ul`
     list-style: dash;
     padding: 0.25rem;
     margin: 0 1rem;
-`
+`;
+
 const ListItem = styled.li`
     margin: 1rem 0;
     padding: 0;
     color: ${p => p.theme.colors.primaryDarkGrey};       
     font-family: Roboto, sans-serif;
-`
+`;
 
 const courageProps ={
     title: "Courage",
@@ -52,7 +53,7 @@ const courageProps ={
             color: theme.colors.secondaryPink,
         }
     },
-}
+};
 
 const focusProps ={
     title: "Focus",
@@ -72,7 +73,7 @@ const focusProps ={
             color: theme.colors.secondaryPurple,
         }
     },
-}
+};
 
 const commitmentProps ={
     title: "Commitment",
@@ -92,7 +93,7 @@ const commitmentProps ={
             color: theme.colors.secondaryYellow
         }
     },
-}
+};
 
 const respectProps ={
     title: "Respect",
@@ -112,7 +113,7 @@ const respectProps ={
             color: theme.colors.secondaryOrange,
         }
     },
-}
+};
 
 const openessProps ={
     title: "Openess",
@@ -132,7 +133,7 @@ const openessProps ={
             color: theme.colors.secondaryGreen
         }
     },
-}
+};
 
 const ScrumValues = (props) => {
 
@@ -148,4 +149,4 @@ const ScrumValues = (props) => {
     </SectionWrapper>
 }
 
-export default ScrumValues
+export default ScrumValues;

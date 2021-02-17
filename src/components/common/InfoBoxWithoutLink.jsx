@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -36,4 +36,5 @@ const InfoBoxWithoutLink = (props) => {
     </Wrapper>
   );
 }
-export default InfoBoxWithoutLink
+
+export default InfoBoxWithoutLink;

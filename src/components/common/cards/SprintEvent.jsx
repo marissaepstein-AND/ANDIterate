@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from "styled-components";
 import InfoBox from "../InfoBox";
 
 const Title = styled.div`
@@ -7,8 +7,7 @@ const Title = styled.div`
     color: ${p => p.theme.colors.primaryRed};
     font-weight: ${p => p.theme.h1.fontWeight};
     margin-bottom: 1rem;
-`
-
+`;
 
 const cardProps ={
   title: "Next Sprint Event:",
@@ -29,7 +28,7 @@ const cardProps ={
   
 //   linkName:"Definition of Ready",
 //   link:"www.google.com"
-}
+};
 
 const EventCard = (props) => {
 
@@ -38,4 +37,5 @@ const EventCard = (props) => {
   );
 
 }
-export default EventCard
+
+export default EventCard;
