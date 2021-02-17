@@ -218,6 +218,8 @@ const ScrumArtifacts = (props) => {
             <InfoBoxWithoutLink {...productGoalProps}/>
             <InfoBoxWithoutLink {...sprintBacklogProps}/>
             <InfoBoxWithoutLink {...sprintGoalProps}/>
+        </BoxWrapper>
+        <BoxWrapper>      
             <InfoBoxWithoutLink {...DoRProps}/>
             <InfoBoxWithoutLink {...DoDProps}/>
             <InfoBoxWithoutLink {...productIncProps}/>
