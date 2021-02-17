@@ -25,9 +25,6 @@ const cardProps ={
         backgroundColor: 'grey'
       }
     }
-  
-//   linkName:"Definition of Ready",
-//   link:"www.google.com"
 };
 
 const EventCard = (props) => {
