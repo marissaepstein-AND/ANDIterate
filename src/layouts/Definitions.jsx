@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import theme from '../styles/theme';
+import theme, { media } from '../styles/theme';
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 
 const SectionWrapper = styled.div`
@@ -15,7 +15,11 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto
+    width: 100%;
+
+    ${media.mobileLarge`
+        flex-direction: row;
+    `}
 `;
 
 const BoxContentWrapper = styled.div`
@@ -75,7 +79,7 @@ const burndownProps ={
         <List>
             <ListItem>A visual representation of the team’s progress</ListItem>  
             <ListItem>Plots the work committed vs the work delivered during a Sprint</ListItem>  
-<           ListItem>Updated every day to help ensure that the team is focused on meeting the Sprint Goal</ListItem>  
+            <ListItem>Updated every day to help ensure that the team is focused on meeting the Sprint Goal</ListItem>  
         </List>
     </BoxContentWrapper>,    
     style:{
