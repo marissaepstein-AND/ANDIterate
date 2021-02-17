@@ -2,10 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import InfoBox from "../InfoBox";
 
-const Title = styled.div`
-    font-size: 2rem; 
-`;
-
 const List = styled.ul`
     list-style: none;
     padding: 0;

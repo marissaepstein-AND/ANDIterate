@@ -15,7 +15,7 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto
+    width: auto;
 `;
 
 const BoxContentWrapper = styled.div`
@@ -184,7 +184,7 @@ const DoDProps ={
         },
         titleStyle:{
             backgroundColor: theme.colors.primaryWhite,
-            color: theme.colors.secondaryPurple
+            color: theme.colors.secondaryPurple,
         }
     },
 };

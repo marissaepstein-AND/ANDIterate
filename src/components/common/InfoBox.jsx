@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { css } from "styled-components";
-import { Link, withRouter } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   box-shadow: 0 4px 2px -1px #c1c1c1;

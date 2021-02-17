@@ -6,6 +6,8 @@ import styled from 'styled-components'
 import TeamMembers from '../../resources/data/teams'
 import { SvgIcon } from 'material-ui';
 
+
+
 const Card = styled.div`
     padding: 20px;
     text-align: center;
