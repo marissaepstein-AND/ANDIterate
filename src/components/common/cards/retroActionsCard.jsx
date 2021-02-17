@@ -35,12 +35,13 @@ const cardProps ={
   link:"www.google.com"
 }
 
-const RetroActionsCard = ({info}) => {
 
-  const filteredInfo = info[1]
-  console.log(filteredInfo)
+
+const RetroActionsCard = ({openModal}) => {
+
+  const id = 1
   return(
-    <InfoBox card={cardProps} info={filteredInfo} />
+    <InfoBox card={cardProps} action={() => openModal(id)}/>
   );
 
 }
