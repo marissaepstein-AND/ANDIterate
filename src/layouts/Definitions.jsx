@@ -17,13 +17,9 @@ const BoxWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    ${media.tablet`
+    ${media.mobileLarge`
         flex-direction: row;
-    `}
-
-    // ${media.mobileLarge`
-    //     flex-direction: row;
-    // `} 
+    `} 
 `;
 
 const BoxContentWrapper = styled.div`
