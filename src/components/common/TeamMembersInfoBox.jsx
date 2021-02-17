@@ -34,6 +34,7 @@ const MemberDetails = styled.div`
 const MemberImage = styled.img`
     border-radius: 20px;
     height: auto;
+    max-height: 200px;
     max-width: 300px;
     object-fit: cover;
     width: 100%;
