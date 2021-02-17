@@ -37,10 +37,11 @@ const cardProps ={
   link:"www.google.com"
 }
 
-const DorCard = (props) => {
+const DorCard = ({openModal}) => {
 
+  const id = 3
   return(
-    <InfoBox {...cardProps}/>
+    <InfoBox card={cardProps} action={() => openModal(id)}/>
   );
 
 }

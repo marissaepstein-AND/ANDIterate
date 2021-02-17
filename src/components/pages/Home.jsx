@@ -37,6 +37,9 @@ const Home = () => {
       <Modal showModal={showModal} setShowModal={setShowModal} info={info} />
 
       <RetroActionsCard openModal={(id) => openModal(id)}/>
+      <SprintGoalCard openModal={(id) => openModal(id)}/>
+      <DodCard openModal={(id) => openModal(id)}/>
+      <DorCard openModal={(id) => openModal(id)}/>
 
 
       

@@ -34,10 +34,11 @@ const cardProps ={
   link:"www.google.com"
 }
 
-const SprintGoalCard = (props) => {
+const SprintGoalCard = ({openModal}) => {
 
+  const id = 1
   return(
-    <InfoBox {...cardProps}/>
+    <InfoBox card ={cardProps} action={() => openModal(id)}/>
   );
 
 }

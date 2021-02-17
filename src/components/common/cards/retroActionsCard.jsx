@@ -39,7 +39,7 @@ const cardProps ={
 
 const RetroActionsCard = ({openModal}) => {
 
-  const id = 1
+  const id = 0
   return(
     <InfoBox card={cardProps} action={() => openModal(id)}/>
   );
