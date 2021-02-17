@@ -71,17 +71,15 @@ const Home = () => {
         <LeftContainer>
             <EventCard />
             <SprintGoalCard/>
+            <TeamMembersInfoBox/>
         </LeftContainer>
         <RightContainer>
             <Top>
-            <DodCard />
-            <DorCard />
+                <DodCard />
+                <DorCard />
             </Top>
-
             <RetroActionsCard />
-
       </RightContainer>
-      <TeamMembersInfoBox/>
     </Page>
 }
 
