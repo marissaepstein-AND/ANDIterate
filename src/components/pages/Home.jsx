@@ -3,7 +3,6 @@ import { media } from "../../styles/theme"
 import styled from "styled-components"
 import TeamMembersInfoBox from "../common/TeamMembersInfoBox"
 import { Page } from "../common/Page"
-import InfoBox from "../common/InfoBox";
 import SprintGoalCard from "../common/cards/sprintGoalCard";
 import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
@@ -19,17 +18,17 @@ const LeftContainer = styled.div`
         width: 50%;
     `}
 
-`
+`;
 
 const RightContainer = styled.div`
     width: 100%; 
 
     ${media.tablet`
-     width: 50%;
-     display: flex; 
-     flex-direction: column;
-`}
-`
+        width: 50%;
+        display: flex; 
+        flex-direction: column;
+    `}
+`;
 
 const Top = styled.div`
     display: flex;
@@ -38,9 +37,28 @@ const Top = styled.div`
     ${media.mobileLarge`
         flex-direction: row;
     `}
-`
+`;
 
+const HeaderWrapper = styled.div`
+    display: flex; 
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: -webkit-fill-available;
+`;
 
+const Title = styled.div`
+    font-size: 4rem;
+    color: ${p => p.theme.colors.primaryDarkGrey}; 
+    font-family: Poppins;
+    font-weight: bold;
+`;
+
+const SprintNo = styled.h2`
+    font-family: Poppins, sans-serif;
+    color: ${p => p.theme.colors.primaryDarkGrey};
+    font-size: 2em;
+`;
 
 const Home = () => {
 
@@ -48,31 +66,33 @@ const Home = () => {
 
     const [showModal, setShowModal] = useState(false)
         const [info,setInfo] = useState(null)
-        const openModal = (id) => {
+        const openModal = (details) => {
           let filteredInfo = information.find(x => {
-            return x.id == id
+            return x.id == details.id
           })
-          setInfo(filteredInfo)
+          setInfo({"color":details.color,"info":filteredInfo})
           setShowModal(prev => !prev)
         } 
 
     return <Page>
-        <Modal showModal={showModal} setShowModal={setShowModal} info={info} />
-        <LeftContainer>
-            <EventCard />
-            <SprintGoalCard openModal={(id) => openModal(id)}/>
+      <Modal showModal={showModal} setShowModal={setShowModal} info={info} />
+      <LeftContainer>
+        <HeaderWrapper>
+            <Title>Agile ANDi's</Title>
+            <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
+        </HeaderWrapper>
+            <EventCard openModal={(details) => openModal(details)}/>
+            <SprintGoalCard openModal={(details) => openModal(details)}/>
+            <TeamMembersInfoBox />
         </LeftContainer>
         <RightContainer>
             <Top>
-            <DodCard openModal={(id) => openModal(id)}/>
-            <DorCard openModal={(id) => openModal(id)}/>
+                <DorCard openModal={(details) => openModal(details)}/>
+                <DodCard openModal={(details) => openModal(details)}/>
             </Top>
-
-            <RetroActionsCard openModal={(id) => openModal(id)}/>
-
+            <RetroActionsCard openModal={(details) => openModal(details)}/>
       </RightContainer>
-      <TeamMembersInfoBox/>
     </Page>
 }
 
-export default Home
+export default Home;

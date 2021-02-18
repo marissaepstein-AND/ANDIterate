@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
-import styled, { css } from "styled-components";
-import { Link, withRouter } from 'react-router-dom'
-//import { Modal } from './modal';
+import React from 'react';
+import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   box-shadow: 0 4px 2px -1px #c1c1c1;
@@ -9,19 +8,29 @@ const Wrapper = styled.div`
   margin: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  // height: fit-content;
   ${props => props};
   
 `;
+
+// const TitleBox = styled.div`
+//   border-radius: 16px 16px 0 0;
+//   padding: 0 1rem;
+//   color: white;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   font-family: Poppins;
+//   ${props => props};
+// `;
 
 const TitleBox = styled.div`
   border-radius: 16px 16px 0 0;
   padding: 0 1rem;
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  font-family: Poppins;
+  ${p => p.theme.h1.fontWeight}
   ${props => props};
 `;
 
@@ -39,13 +48,13 @@ const Linker = styled(Link)`
   margin: 1rem 1rem 0;
   color: black;
   height: fit-content;
-`
+`;
 
 const BottomContainer = styled.div`
   width: 100%; 
   margin-top: 2rem; 
   text-align: right;
-`
+`;
 
 const InfoBox = ({card,action}) => {
   //const [showModal, setShowModal] = useState(false)
@@ -75,4 +84,5 @@ const InfoBox = ({card,action}) => {
     
   );
 }
-export default InfoBox
+
+export default InfoBox;

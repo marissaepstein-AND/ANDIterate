@@ -1,22 +1,22 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from "styled-components";
+import theme from '../../../styles/theme';
 import InfoBox from "../InfoBox";
 
-const Title = styled.div`
-    font-size: 2rem; 
-`
 const List = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0 1rem;
-`
+`;
+
 const ListItem = styled.li`
-    background-color: #A050FF;
+    background-color: ${p => p.theme.colors.secondaryOrange};
     margin: 1rem 0;
     padding: 0.5rem;
-    color: white;       
+    color: ${p => p.theme.colors.primaryWhite};      
     font-weight: ${p => p.theme.h1.fontWeight};
-`
+    font-family: Roboto, sans-serif;
+`;
 
 const cardProps ={
   title: "Definition of Ready",
@@ -29,29 +29,26 @@ const cardProps ={
           <ListItem>Performance criteria should be understood by the team</ListItem>
       </List>,
   style:{
-    // wrapperStyle: {
-    //     height: '90%'
-    //   },
-      titleStyle:{
-        border: "solid 3px #A050FF",
-        borderBottom: 'none',
-        color: "#A050FF",
-      },
-      bodyStyle: {
-        border: "solid 3px #A050FF",
-      },
-      linkStyle: {
-        backgroundColor: 'grey'
-      }
+    wrapperStyle: {
+      border: "solid 3px",
+      borderColor: theme.colors.secondaryOrange,
+    },
+    titleStyle:{
+      height: '100%',
+      borderBottom: "solid 3px",
+      borderColor: theme.colors.secondaryOrange,
+      color: theme.colors.secondaryOrange,
+    },
   }
-}
+};
 
 const DorCard = ({openModal}) => {
 
-  const id = 3
+  const details = {"id":3,"color":theme.colors.secondaryOrange}
   return(
-    <InfoBox card={cardProps} action={() => openModal(id)}/>
+    <InfoBox card={cardProps} action={() => openModal(details)}/>
   );
 
 }
+
 export default DorCard

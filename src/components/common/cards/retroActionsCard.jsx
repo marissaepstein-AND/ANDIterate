@@ -1,22 +1,22 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
+import styled from "styled-components";
+import theme from '../../../styles/theme';
 import InfoBox from "../InfoBox";
 
-const Title = styled.div`
-    font-size: 2rem; 
-`
 const List = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0 1rem;
-`
+`;
+
 const ListItem = styled.li`
-    background-color: #2897FF;
+    background-color: ${p => p.theme.colors.secondaryGreen};
     margin: 1rem 0;
     padding: 0.5rem;
-    color: white;       
+    color: ${p => p.theme.colors.primaryWhite};       
     font-weight: ${p => p.theme.h1.fontWeight};
-`
+    font-family: Roboto, sans-serif;
+`;
 
 const cardProps ={
   title: "Retro Actions",
@@ -27,29 +27,29 @@ const cardProps ={
           <ListItem>Refactor database system</ListItem>
       </List>,
   style:{
-      titleStyle:{
-        //   backgroundColor:'#2897FF',
-          border: "solid 3px #2897FF",
-          borderBottom: 'none',
-          color: "#2897FF",
-        },
-        bodyStyle: {
-          border: "solid 3px #2897FF",
-        },
-        linkStyle: {
-            backgroundColor: 'grey'
-        }
-    }
-}
+    wrapperStyle: {
+      border: "solid 3px",
+      borderColor: theme.colors.secondaryGreen,
+    },
+    titleStyle:{
+      height: '100%',
+      borderBottom: "solid 3px",
+      borderColor: theme.colors.secondaryGreen,
+      color: theme.colors.secondaryGreen,
+    },
+  }
+};
 
 
 
 const RetroActionsCard = ({openModal}) => {
 
-  const id = 0
+    const details = {"id":0,"color":theme.colors.secondaryGreen}
+
   return(
-    <InfoBox card={cardProps} action={() => openModal(id)}/>
+    <InfoBox card={cardProps} action={() => openModal(details)}/>
   );
 
 }
-export default RetroActionsCard
+
+export default RetroActionsCard;
