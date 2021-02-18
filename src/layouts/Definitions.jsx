@@ -24,7 +24,7 @@ const BoxWrapper = styled.div`
 
 const BoxContentWrapper = styled.div`
     padding: 15px;
-`
+`;
 
 const BoxSubtitle = styled.p`
     color: ${p => p.theme.colors.primaryDarkGrey}; 

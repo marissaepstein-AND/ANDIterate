@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
+  ${props => props};
   box-shadow: 0 4px 2px -1px #c1c1c1;
   border-radius: 20px;
   margin: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
+  flex: 1;
   // height: fit-content;
-  ${props => props};
-  
 `;
 
 // const TitleBox = styled.div`

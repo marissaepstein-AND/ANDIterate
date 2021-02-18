@@ -17,7 +17,6 @@ const LeftContainer = styled.div`
     ${media.tablet`
         width: 50%;
     `}
-
 `;
 
 const RightContainer = styled.div`
@@ -39,12 +38,22 @@ const Top = styled.div`
     `}
 `;
 
-const HeaderWrapper = styled.div`
+const ContentWrapper = styled.div`
     display: flex; 
     flex-direction: column;
     margin: 0 auto;
     padding: 1rem;
     min-height: -webkit-fill-available;
+    width: -webkit-fill-available;
+`;
+
+const BoxWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    ${media.mobileLarge`
+        flex-direction: row;
+    `} 
 `;
 
 const Title = styled.div`
@@ -52,12 +61,14 @@ const Title = styled.div`
     color: ${p => p.theme.colors.primaryDarkGrey}; 
     font-family: Poppins;
     font-weight: bold;
+    margin: 0 15px;
 `;
 
 const SprintNo = styled.h2`
     font-family: Poppins, sans-serif;
     color: ${p => p.theme.colors.primaryDarkGrey};
     font-size: 2em;
+    margin: 0 15px;
 `;
 
 const Home = () => {
@@ -75,23 +86,25 @@ const Home = () => {
         } 
 
     return <Page>
-      <Modal showModal={showModal} setShowModal={setShowModal} info={info} />
-      <LeftContainer>
-        <HeaderWrapper>
+        <ContentWrapper>
+        <Modal showModal={showModal} setShowModal={setShowModal} info={info} />
             <Title>Agile ANDi's</Title>
             <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
-        </HeaderWrapper>
-            <EventCard openModal={(details) => openModal(details)}/>
-            <SprintGoalCard openModal={(details) => openModal(details)}/>
-            <TeamMembersInfoBox />
-        </LeftContainer>
-        <RightContainer>
-            <Top>
-                <DorCard openModal={(details) => openModal(details)}/>
-                <DodCard openModal={(details) => openModal(details)}/>
-            </Top>
-            <RetroActionsCard openModal={(details) => openModal(details)}/>
-      </RightContainer>
+            <BoxWrapper>
+                <LeftContainer>
+                    <EventCard openModal={(details) => openModal(details)}/>
+                    <SprintGoalCard openModal={(details) => openModal(details)}/>
+                    <TeamMembersInfoBox/>
+                </LeftContainer>
+                <RightContainer>
+                    <Top>
+                        <DorCard openModal={(details) => openModal(details)}/>
+                        <DodCard openModal={(details) => openModal(details)}/>
+                    </Top>
+                    <RetroActionsCard openModal={(details) => openModal(details)}/>
+                </RightContainer>
+            </BoxWrapper>
+        </ContentWrapper>
     </Page>
 }
 
