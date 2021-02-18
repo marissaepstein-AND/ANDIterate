@@ -10,14 +10,13 @@ const Login = ({ props, CheckUser }) => {
         var succesfulLogin = false;
         succesfulLogin = await Auth.loginFunction();
         if (succesfulLogin) {
-            history.push("/home")
+            //history.push("/home")
         }
 
     }
 
     async function handleClick2() {
-        let retrievedEvents = await Auth.calendarFunction();
-        console.log(retrievedEvents)
+        let retrievedEvents = await Auth.calendarFunction().then(() => {console.log(retrievedEvents)})
     }
 
     const handleClick3 = () => {

@@ -58,8 +58,6 @@ class Auth {
                     })
                     )
                 })
-            } else {
-                reject("Calendar Call failed because the user isn't logged in")
             }
         })
     }
