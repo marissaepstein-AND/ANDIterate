@@ -17,7 +17,6 @@ const LeftContainer = styled.div`
     ${media.tablet`
         width: 50%;
     `}
-
 `;
 
 const RightContainer = styled.div`
@@ -57,26 +56,37 @@ const Container = styled.div`
     `}
 `;
 
-const HeaderWrapper = styled.div`
+const ContentWrapper = styled.div`
     display: flex; 
     flex-direction: column;
     margin: 0 auto;
     padding: 1rem;
     min-height: -webkit-fill-available;
+    width: -webkit-fill-available;
+`;
+
+const BoxWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    ${media.mobileLarge`
+        flex-direction: row;
+    `} 
 `;
 
 const Title = styled.div`
     font-size: 4rem;
     color: ${p => p.theme.colors.primaryDarkGrey}; 
-    text-align: center;
     font-family: Poppins;
     font-weight: bold;
+    margin: 0 15px;
 `;
 
 const SprintNo = styled.h2`
     font-family: Poppins, sans-serif;
     color: ${p => p.theme.colors.primaryDarkGrey};
     font-size: 2em;
+    margin: 0 15px;
 `;
 
 const Home = () => {
@@ -84,23 +94,20 @@ const Home = () => {
     //Create contents for the sprint goal info box
 
     return <Page>
+             <LeftContainer>
         <HeaderWrapper>
             <Title>Agile ANDi's</Title>
             <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
         </HeaderWrapper>
-        <LeftContainer>
-            <div>
             <EventCarousel />
-            </div>
-            {/* <EventCard /> */}
-            <SprintGoalCard />
-            <TeamMembersInfoBox />
+            <SprintGoalCard/>
+            <TeamMembersInfoBox/>
         </LeftContainer>
         <RightContainer>
-            {/* <Top> */}
-                <DodCard />
+            <Top>
                 <DorCard />
-            {/* </Top> */}
+                <DodCard />
+            </Top>
             <RetroActionsCard />
       </RightContainer>
     </Page>

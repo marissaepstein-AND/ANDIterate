@@ -15,16 +15,16 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: 100%;
+    flex-direction: column;
 
     ${media.mobileLarge`
         flex-direction: row;
-    `}
+    `} 
 `;
 
 const BoxContentWrapper = styled.div`
     padding: 15px;
-`
+`;
 
 const BoxSubtitle = styled.p`
     color: ${p => p.theme.colors.primaryDarkGrey}; 
@@ -61,8 +61,7 @@ const timeboxProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.primaryRed,
         },
         titleStyle:{
@@ -84,8 +83,7 @@ const burndownProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryOrange,
         },
         titleStyle:{
@@ -107,8 +105,7 @@ const mvpProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{
@@ -131,8 +128,7 @@ const userStoriesProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
@@ -153,8 +149,7 @@ const estimatingProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{

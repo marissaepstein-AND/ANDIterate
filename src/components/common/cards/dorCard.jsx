@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import theme from '../../../styles/theme';
 import InfoBox from "../InfoBox";
 
 const List = styled.ul`
@@ -9,11 +10,12 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-    background-color: #A050FF;
+    background-color: ${p => p.theme.colors.secondaryOrange};
     margin: 1rem 0;
     padding: 0.5rem;
-    color: white;       
+    color: ${p => p.theme.colors.primaryWhite};      
     font-weight: ${p => p.theme.h1.fontWeight};
+    font-family: Roboto, sans-serif;
 `;
 
 const cardProps ={
@@ -27,17 +29,16 @@ const cardProps ={
           <ListItem>Performance criteria should be understood by the team</ListItem>
       </List>,
   style:{
-    // wrapperStyle: {
-    //     height: '90%'
-    //   },
-      titleStyle:{
-        border: "solid 3px #A050FF",
-        borderBottom: 'none',
-        color: "#A050FF",
-      },
-      bodyStyle: {
-        border: "solid 3px #A050FF",
-      }
+    wrapperStyle: {
+      border: "solid 3px",
+      borderColor: theme.colors.secondaryOrange,
+    },
+    titleStyle:{
+      height: '100%',
+      borderBottom: "solid 3px",
+      borderColor: theme.colors.secondaryOrange,
+      color: theme.colors.secondaryOrange,
+    },
   },
   linkName:"Definition of Ready",
   link:"www.google.com"

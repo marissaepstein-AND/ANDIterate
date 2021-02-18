@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import theme from '../styles/theme';
+import theme, { media } from '../styles/theme';
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 
 const SectionWrapper = styled.div`
@@ -15,9 +15,12 @@ const Heading = styled.h2`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto;
-`;
+    flex-direction: column;
 
+    ${media.mobileLarge`
+        flex-direction: row;
+    `} 
+`;
 const BoxContentWrapper = styled.div`
     padding: 15px;
 `;
@@ -60,8 +63,7 @@ const productBacklogProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.primaryRed,
         },
         titleStyle:{
@@ -84,8 +86,7 @@ const productGoalProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryOrange,
         },
         titleStyle:{
@@ -106,8 +107,7 @@ const sprintBacklogProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{
@@ -130,8 +130,7 @@ const sprintGoalProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
@@ -154,8 +153,7 @@ const DoRProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{
@@ -178,8 +176,7 @@ const DoDProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryPurple,
         },
         titleStyle:{
@@ -199,8 +196,7 @@ const productIncProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryPink,
         },
         titleStyle:{

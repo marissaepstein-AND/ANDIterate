@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import theme from '../styles/theme';
+import theme, { media } from '../styles/theme';
 import InfoBoxWithoutLink from "../components/common/InfoBoxWithoutLink";
 
 const SectionWrapper = styled.div`
@@ -23,7 +23,11 @@ const SectionText = styled.p`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: auto;
+    flex-direction: column;
+
+    ${media.mobileLarge`
+        flex-direction: row;
+    `} 
 `;
 
 const BoxContentWrapper = styled.div`
@@ -85,8 +89,7 @@ const planningProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid  5px',
             borderColor: theme.colors.secondaryPink,
         },
         titleStyle:{
@@ -123,8 +126,7 @@ const dailyProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
@@ -165,8 +167,7 @@ const reviewProps ={
     </BoxContentWrapper>,    
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryOrange,
         },
         titleStyle:{
@@ -206,8 +207,7 @@ const retroProps ={
     </BoxContentWrapper>,
     style:{
         wrapperStyle:{
-            borderStyle: 'solid',
-            borderWidth: '5px',
+            border: 'solid 5px',
             borderColor: theme.colors.secondaryPurple,
         },
         titleStyle:{
