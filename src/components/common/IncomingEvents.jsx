@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IncommingEvents(props) {
+export default function IncomingEvents(props) {
     return (
         <div>
             <div>{props.events.summary}</div>

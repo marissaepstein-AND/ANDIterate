@@ -10,7 +10,8 @@ export const Page = styled.div`
     min-height: -webkit-fill-available;
     width: -webkit-fill-available;
 
+
     ${media.tablet`
         flex-direction: row;
     `}
-`;
+`

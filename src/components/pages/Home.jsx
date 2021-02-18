@@ -8,6 +8,8 @@ import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
 import DorCard from '../common/cards/dorCard';
 import EventCard from "../common/cards/SprintEvent"
+import EventBox from "../common/EventBox"
+import EventCarousel from "../common/EventCarousel"
 
 const LeftContainer = styled.div`
     width: 100%;
@@ -27,7 +29,25 @@ const RightContainer = styled.div`
     `}
 `;
 
-const Top = styled.div`
+const BottomContainer = styled.div`
+    width: 100%;
+    flex-direction: column; 
+
+    ${media.tablet`
+    flex-direction: row;
+`}
+`
+
+const TopSection = styled.div`
+    display: flex; 
+    flex-direction: column;
+
+    ${media.tablet`
+        flex-direction: row;
+    `}
+`
+
+const Container = styled.div`
     display: flex;
     flex-direction: column;
 
@@ -74,24 +94,22 @@ const Home = () => {
     //Create contents for the sprint goal info box
 
     return <Page>
-        <ContentWrapper>
+             <LeftContainer>
+        <HeaderWrapper>
             <Title>Agile ANDi's</Title>
             <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
-            <BoxWrapper>
-                <LeftContainer>
-                    <EventCard />
-                    <SprintGoalCard/>
-                    <TeamMembersInfoBox/>
-                </LeftContainer>
-                <RightContainer>
-                    <Top>
-                        <DorCard />
-                        <DodCard />
-                    </Top>
-                    <RetroActionsCard />
-                </RightContainer>
-            </BoxWrapper>
-        </ContentWrapper>
+        </HeaderWrapper>
+            <EventCarousel />
+            <SprintGoalCard/>
+            <TeamMembersInfoBox/>
+        </LeftContainer>
+        <RightContainer>
+            <Top>
+                <DorCard />
+                <DodCard />
+            </Top>
+            <RetroActionsCard />
+      </RightContainer>
     </Page>
 }
 

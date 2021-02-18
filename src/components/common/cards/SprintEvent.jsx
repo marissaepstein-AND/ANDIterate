@@ -36,7 +36,7 @@ const cardProps ={
 const EventCard = (props) => {
 
   return(
-    <InfoBox {...cardProps}/>
+    <InfoBox {...cardProps} />
   );
 
 }
