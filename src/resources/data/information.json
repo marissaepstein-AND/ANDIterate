@@ -50,8 +50,7 @@
         "The ‘Done’ increment should be potentially releasable and is integrated with previous increments"
       ]
     }]
-  },
-  {
+  },{
     "id":3,
     "title":"Definiton of Ready",
     "content":[{
@@ -63,5 +62,41 @@
         "Not having a clearly defined DoR can lead to rework or waste"
       ]
     }]
+  },{
+    "id":4,
+    "title":"Team members",
+    "content":[{
+      "header":"Scrum Master:",
+      "items":[
+        "Serves the scrum team by helping the team focus on high value increments that meet the Definition of Done",
+        "Ensure all Scrum events take place within the timebox and are positive and productive",
+        "Serves the Product Owner by helping to find techniques for effective Product Goal definition and Product Backlog management",
+        "Facilitating stakeholder collaboration as requested or needed",
+        "Serves the Organisation by leading, training and coaching the organisation in its Scrum adoption",
+        "Helping employees and stakeholders understand and enact an empirical approach for complex work"
+      ]
+    },{
+      "header":"Product Owner is accountable for:",
+      "items":[
+        "Maximising the value of the product from the work of the Scrum Team",
+        "Developing and communicating the Product Goal",
+        "Creating and clearly communicating Product Backlog items",
+        "Ordering Product Backlog items",
+        "Ensuring the Product Backlog is transparent, visible and understood"
+      ]},{
+        "header":"Developers are accountable for:",
+        "items":[
+          "Creating a plan for the Sprint",
+          "Adhering to a Definition of Done to instill quality",
+          "Adapting their plan towards a Sprint Goal each day",
+          "Holding each other accountable"
+        ]}
+  ]},{
+    "id":"5",
+    "title":"Sprint Events",
+    "content":[{
+      "header":"Check the Scrum hints and tips page for information about each scrum event",
+      "items":[]
+      }]
   }
 ]
