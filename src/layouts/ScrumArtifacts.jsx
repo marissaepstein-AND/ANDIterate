@@ -67,7 +67,7 @@ const productBacklogProps ={
             borderColor: theme.colors.primaryRed,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.primaryRed,
         }
     },
@@ -90,7 +90,7 @@ const productGoalProps ={
             borderColor: theme.colors.secondaryOrange,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryOrange,
         }
     },
@@ -111,7 +111,7 @@ const sprintBacklogProps ={
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryYellow,
         }
     },
@@ -134,7 +134,7 @@ const sprintGoalProps ={
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryGreen,
         }
     },
@@ -157,7 +157,7 @@ const DoRProps ={
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.primaryBlue,
         }
     },
@@ -180,7 +180,7 @@ const DoDProps ={
             borderColor: theme.colors.secondaryPurple,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryPurple,
         }
     },
@@ -200,7 +200,7 @@ const productIncProps ={
             borderColor: theme.colors.secondaryPink,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryPink,
         }
     },

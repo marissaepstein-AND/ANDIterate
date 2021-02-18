@@ -5,34 +5,35 @@ class Auth {
     }
 
     static async loginFunction() {
-        let gapi = window.gapi
-        let CLIENT_ID = "467971129335-5qmjs9a8mcp9370e7qj8uc2a3p175sb9.apps.googleusercontent.com"
-        let API_KEY = "AIzaSyCr_5BVcdimHTMcZczxL_ScgvJVkCb9NeY"
-        let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
-        let SCOPES = "https://www.googleapis.com/auth/calendar.events"
-
-        gapi.load('client:auth2', () => {
-            console.log('loaded auth')
-            gapi.auth2.init({
-                clientId: CLIENT_ID,
-                apiKey: API_KEY,
-                clientId: CLIENT_ID,
-                discoveryDocs: DISCOVERY_DOCS,
-                scope: SCOPES,
-            })
-
-            gapi.auth2.getAuthInstance().signIn().then((response) => {
-                console.log(response)
-                Auth.booly = true;
-            }).catch((error) => {
-                console.log("Error: " + error);
-                Auth.booly = false;
+        return new Promise((resolve, reject) => {
+            let gapi = window.gapi
+            let CLIENT_ID = "467971129335-5qmjs9a8mcp9370e7qj8uc2a3p175sb9.apps.googleusercontent.com"
+            let API_KEY = "AIzaSyCr_5BVcdimHTMcZczxL_ScgvJVkCb9NeY"
+            let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
+            let SCOPES = "https://www.googleapis.com/auth/calendar.events"
+            gapi.load('client:auth2', () => {
+                console.log('loaded auth')
+                gapi.auth2.init({
+                    clientId: CLIENT_ID,
+                    apiKey: API_KEY,
+                    discoveryDocs: DISCOVERY_DOCS,
+                    scope: SCOPES,
+                })
+                gapi.auth2.getAuthInstance().signIn().then(() => {
+                    console.log("Logged In, setting booly true")
+                    Auth.booly = true;
+                    resolve(true)
+                }).catch((error) => {
+                    reject(false)
+                    console.log("Error: " + error);
+                    Auth.booly = false;
+                })
             })
         })
     }
 
     static async logoutFunction() {
-        if (Auth.booly == true) {
+        if (Auth.booly === true) {
             let gapi = window.gapi;
             let signOut = gapi.auth2.getAuthInstance();
             signOut.signOut().then(console.log("Signed out successfully"))
@@ -42,26 +43,30 @@ class Auth {
         }
     }
 
-    static calendarFunction() {
-        if (this.booly == true) {
-            let gapi = window.gapi;
-            gapi.load('client:auth2', () => {
-                gapi.client.load('calendar', 'v3', () => gapi.client.calendar.events.list({
-                    'calendarId': 'primary',
-                    'maxResults': 10,
-                }).then(response => {
-                    const events = response.result.items
-                    console.log('EVENTS: ', events)
-                }))
-
-            })
-        } else { console.log("You're not signed in can't make an API call") }
-
+    static async calendarFunction() {
+        return new Promise((resolve, reject) => {
+            if (this.booly === true) {
+                let gapi = window.gapi;
+                gapi.load('client:auth2', () => {
+                    gapi.client.load('calendar', 'v3', () => gapi.client.calendar.events.list({
+                        'calendarId': 'primary',
+                        'maxResults': 10,
+                    }).then(response => {
+                        const events = response.result.items
+                        console.log('EVENTS: ', events)
+                        resolve(events)
+                    })
+                    )
+                })
+            } else {
+                reject("Calendar Call failed because the user isn't logged in")
+            }
+        })
     }
 
     static isLoggedInFunction() {
         let test = this.booly;
-        if (test == true) {
+        if (test === true) {
             console.log("Booly is True")
             return true;
         } else {

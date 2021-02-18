@@ -28,7 +28,7 @@ const cardProps ={
         padding: '0.75rem',
       },
       linkStyle: {
-        backgroundColor: theme.colors.primaryDarkGrey,
+        backgroundcolor: theme.colors.primaryDarkGrey,
       }
     }
 };

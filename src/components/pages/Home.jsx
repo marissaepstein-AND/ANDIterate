@@ -8,6 +8,7 @@ import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
 import DorCard from '../common/cards/dorCard';
 import EventCard from "../common/cards/SprintEvent"
+import EventBox from "../common/EventBox"
 
 const LeftContainer = styled.div`
     width: 100%;
@@ -82,6 +83,7 @@ const Home = () => {
                     <EventCard />
                     <SprintGoalCard/>
                     <TeamMembersInfoBox/>
+                    <EventBox></EventBox>
                 </LeftContainer>
                 <RightContainer>
                     <Top>

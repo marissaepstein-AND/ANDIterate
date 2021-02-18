@@ -1,23 +1,24 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Auth from '../../services/AuthService'
-import { Router } from 'react-router-dom';
 
 const Login = ({ props, CheckUser }) => {
-    
+
     const history = useHistory()
 
     async function handleClick() {
-        Auth.loginFunction()
+        var succesfulLogin = false;
+        succesfulLogin = await Auth.loginFunction();
+        if (succesfulLogin) {
+            history.push("/home")
+        }
+
     }
 
     async function handleClick2() {
-        Auth.calendarFunction();
+        let retrievedEvents = await Auth.calendarFunction();
+        console.log(retrievedEvents)
     }
-
-    // useEffect(() => {
-    //     console.log(user);
-    // }, [])
 
     const handleClick3 = () => {
         Auth.isLoggedInFunction();

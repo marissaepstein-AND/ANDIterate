@@ -55,7 +55,7 @@ const transparencyProps ={
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.primaryBlue,
         }
     },
@@ -76,7 +76,7 @@ const inspectionProps ={
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryGreen,
         }
     },
@@ -95,7 +95,7 @@ const adaptionProps ={
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryYellow,
         }
     },
