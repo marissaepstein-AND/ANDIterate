@@ -94,7 +94,7 @@ const Home = () => {
                 <LeftContainer>
                     <EventCard openModal={(details) => openModal(details)}/>
                     <SprintGoalCard openModal={(details) => openModal(details)}/>
-                    <TeamMembersInfoBox/>
+                    <TeamMembersInfoBox openModal={(details) => openModal(details)}/>
                 </LeftContainer>
                 <RightContainer>
                     <Top>

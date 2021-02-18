@@ -19,20 +19,15 @@ const ModalBackground = styled.div`
   width:60%;
   @media screen and (max-width: 768px){
     width:85%;
-    
   }
-  font-weight: ${p => p.theme.h1.fontWeight}
-  height:600px;
+  border:solid 3px;
   box-shadow: 0 5px 16px #000000;
-  
   border-radius:16px;
   background-color: #FFFFFF;
   display:flex;
   flex-direction:column;
   position:relative;
   padding: 1%;
-  color: #FF323C;
-
 `
 const CloseModalButton = styled(MdClose)`
   cursor:pointer;
@@ -44,18 +39,15 @@ const CloseModalButton = styled(MdClose)`
   width:32px;
   height:32px;
   padding:0;
-
 `
 const Header = styled.h1 `
   font-family: Poppins;
   padding: '0.75rem';
-  
 `
 
 const Body = styled.div`
   font-family: Poppins;
   padding: '0.75rem';
-
 `
 
 const generateBody = (content) => {
@@ -65,36 +57,20 @@ const generateBody = (content) => {
       each.items.map(function(item){
         final.push(<li>{item}</li>)
       })
-    
   })
   return final
 }
 
-const Modal = ({showModal, setShowModal,info}) => {
-  
-
-  var body = ""
-  // if(info != null){
-    
-  //   info.content.forEach(function (x,index){
-  //     body.concat(x.header + "<ul>")
-  //     console.log(body)
-  //     x.items.forEach(function (y,index){
-  //       body.concat("<li>" + x.items[y] + "</li>")
-  //     })
-  //     body.concat("</ul>")
-  //   })
-  //   console.log(body)
-  // }
+const Modal = (props) => {
   
   return(
     <div>
-      {showModal ? (
-        <Wrapper>
-          <ModalBackground showModal={showModal}>
-            <CloseModalButton aria-label='Close modal' onClick={() => setShowModal(prev => !prev)} />
-            <Header>{info.info.title}</Header>
-            <Body>{generateBody(info.info.content)}</Body>
+      {props.showModal ? (
+        <Wrapper style={{ color: props.info.color}}>
+          <ModalBackground showModal={props.showModal}>
+            <CloseModalButton aria-label='Close modal' onClick={() => props.setShowModal(prev => !prev)} />
+            <Header>{props.info.info.title}</Header>
+            <Body>{generateBody(props.info.info.content)}</Body>
           </ModalBackground>
         </Wrapper>
       ) : null} 

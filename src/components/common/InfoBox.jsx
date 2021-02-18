@@ -13,18 +13,6 @@ const Wrapper = styled.div`
   // height: fit-content;
 `;
 
-// const TitleBox = styled.div`
-//   border-radius: 16px 16px 0 0;
-//   padding: 0 1rem;
-//   color: white;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: flex-end;
-//   font-family: Poppins;
-//   ${props => props};
-// `;
-
 const TitleBox = styled.div`
   border-radius: 16px 16px 0 0;
   padding: 0 1rem;
@@ -57,14 +45,6 @@ const BottomContainer = styled.div`
 `;
 
 const InfoBox = ({card,action}) => {
-  //const [showModal, setShowModal] = useState(false)
-
-  const openModal = () => {
-    //setShowModal(prev => !prev)
-    
-  }
-
-
   return (
 
     <Wrapper {...card.style.wrapperStyle}>
