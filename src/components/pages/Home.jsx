@@ -59,12 +59,14 @@ const Title = styled.div`
     color: ${p => p.theme.colors.primaryDarkGrey}; 
     font-family: Poppins;
     font-weight: bold;
+    margin: 0 15px;
 `;
 
 const SprintNo = styled.h2`
     font-family: Poppins, sans-serif;
     color: ${p => p.theme.colors.primaryDarkGrey};
     font-size: 2em;
+    margin: 0 15px;
 `;
 
 const Home = () => {
