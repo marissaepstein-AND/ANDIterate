@@ -82,7 +82,7 @@ const scrumMasterProps ={
             borderColor: theme.colors.primaryBlue,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.primaryBlue,
         }
     },
@@ -106,7 +106,7 @@ const productOwnerProps ={
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryGreen,
         }
     },
@@ -129,7 +129,7 @@ const developerProps ={
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryYellow,
         }
     },

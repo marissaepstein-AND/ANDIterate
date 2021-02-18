@@ -46,7 +46,7 @@ const courageProps ={
             borderColor: theme.colors.secondaryPink,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryPink,
         }
     },
@@ -63,7 +63,7 @@ const focusProps ={
             borderColor: theme.colors.secondaryPurple,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryPurple,
         }
     },
@@ -80,7 +80,7 @@ const commitmentProps ={
             borderColor: theme.colors.secondaryYellow,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryYellow,
         }
     },
@@ -97,7 +97,7 @@ const respectProps ={
             borderColor: theme.colors.secondaryOrange,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryOrange,
         }
     },
@@ -114,7 +114,7 @@ const openessProps ={
             borderColor: theme.colors.secondaryGreen,
         },
         titleStyle:{
-            backgroundColor: theme.colors.primaryWhite,
+            backgroundcolor: theme.colors.primaryWhite,
             color: theme.colors.secondaryGreen,
         }
     },

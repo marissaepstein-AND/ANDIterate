@@ -1,5 +1,6 @@
 import React from 'react';
 import Events from '../../resources/data/events.json';
+import Auth from '../../services/AuthService'
 import IncommingEvents from './IncommingEvents';
 
 export default function TeamBox() {

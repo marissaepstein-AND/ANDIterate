@@ -10,6 +10,7 @@ import DorCard from '../common/cards/dorCard';
 import information from '../../resources/data/information.json';
 import Modal from "../common/modal";
 import EventCard from "../common/cards/SprintEvent"
+import EventBox from "../common/EventBox"
 
 const LeftContainer = styled.div`
     width: 100%;
@@ -95,6 +96,7 @@ const Home = () => {
                     <EventCard openModal={(details) => openModal(details)}/>
                     <SprintGoalCard openModal={(details) => openModal(details)}/>
                     <TeamMembersInfoBox/>
+                    <EventBox></EventBox>
                 </LeftContainer>
                 <RightContainer>
                     <Top>
