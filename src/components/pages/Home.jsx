@@ -15,7 +15,6 @@ const LeftContainer = styled.div`
     ${media.tablet`
         width: 50%;
     `}
-
 `;
 
 const RightContainer = styled.div`
@@ -36,14 +35,6 @@ const Top = styled.div`
         flex-direction: row;
     `}
 `;
-
-// const HeaderWrapper = styled.div`
-//     display: flex; 
-//     flex-direction: column;
-//     margin: 0 auto;
-//     padding: 1rem;
-//     min-height: -webkit-fill-available;
-// `;
 
 const ContentWrapper = styled.div`
     display: flex; 
@@ -81,29 +72,23 @@ const Home = () => {
     //Create contents for the sprint goal info box
 
     return <Page>
-        {/* <HeaderWrapper>
-            <Title>Agile ANDi's</Title>
-            <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
-        </HeaderWrapper> */}
         <ContentWrapper>
             <Title>Agile ANDi's</Title>
             <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
             <BoxWrapper>
-            <LeftContainer>
-                <EventCard />
-                <SprintGoalCard/>
-                <TeamMembersInfoBox/>
-            </LeftContainer>
-            <RightContainer>
-                <Top>
-                    <DorCard />
-                    <DodCard />
-                </Top>
-                <RetroActionsCard />
-            </RightContainer>
-
+                <LeftContainer>
+                    <EventCard />
+                    <SprintGoalCard/>
+                    <TeamMembersInfoBox/>
+                </LeftContainer>
+                <RightContainer>
+                    <Top>
+                        <DorCard />
+                        <DodCard />
+                    </Top>
+                    <RetroActionsCard />
+                </RightContainer>
             </BoxWrapper>
-            
         </ContentWrapper>
     </Page>
 }
