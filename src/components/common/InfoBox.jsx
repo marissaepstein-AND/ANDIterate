@@ -56,25 +56,32 @@ const BottomContainer = styled.div`
   text-align: right;
 `;
 
-const InfoBox = (props) => {
+const InfoBox = ({card,action}) => {
+  //const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    //setShowModal(prev => !prev)
+    
+  }
+
 
   return (
-    <Wrapper {...props.style.wrapperStyle}>
-      <TitleBox {...props.style.titleStyle}> 
-      <h1>{props.title}</h1> 
-      {/* <Linker to={props.link} {...props.style.linkStyle}>
-        ?
-      </Linker> */}
+
+    <Wrapper {...card.style.wrapperStyle}>
+      <TitleBox {...card.style.titleStyle}> 
+      <h1>{card.title}</h1> 
+      
       </TitleBox>
-      <BodyBox {...props.style.bodyStyle}> {props.body}   
+      <BodyBox {...card.style.bodyStyle}> {card.body}   
       <BottomContainer>
-      <Linker to={props.link} {...props.style.linkStyle}>
+      <Linker onClick={action} {...card.style.linkStyle}>
         ?
       </Linker>
       </BottomContainer>
       </BodyBox>
     
     </Wrapper>
+    
   );
 }
 

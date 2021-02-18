@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { media } from "../../styles/theme"
 import styled from "styled-components"
 import TeamMembersInfoBox from "../common/TeamMembersInfoBox"
@@ -7,6 +7,8 @@ import SprintGoalCard from "../common/cards/sprintGoalCard";
 import RetroActionsCard from '../common/cards/retroActionsCard';
 import DodCard from '../common/cards/dodCard';
 import DorCard from '../common/cards/dorCard';
+import information from '../../resources/data/information.json';
+import Modal from "../common/modal";
 import EventCard from "../common/cards/SprintEvent"
 
 const LeftContainer = styled.div`
@@ -71,24 +73,35 @@ const SprintNo = styled.h2`
 
 const Home = () => {
 
-    //Create contents for the sprint goal info box
+
+
+    const [showModal, setShowModal] = useState(false)
+        const [info,setInfo] = useState(null)
+        const openModal = (details) => {
+          let filteredInfo = information.find(x => {
+            return x.id == details.id
+          })
+          setInfo({"color":details.color,"info":filteredInfo})
+          setShowModal(prev => !prev)
+        } 
 
     return <Page>
         <ContentWrapper>
+        <Modal showModal={showModal} setShowModal={setShowModal} info={info} />
             <Title>Agile ANDi's</Title>
             <SprintNo>Sprint 1 (15/02/21 - 19/02/21)</SprintNo>
             <BoxWrapper>
                 <LeftContainer>
-                    <EventCard />
-                    <SprintGoalCard/>
+                    <EventCard openModal={(details) => openModal(details)}/>
+                    <SprintGoalCard openModal={(details) => openModal(details)}/>
                     <TeamMembersInfoBox/>
                 </LeftContainer>
                 <RightContainer>
                     <Top>
-                        <DorCard />
-                        <DodCard />
+                        <DorCard openModal={(details) => openModal(details)}/>
+                        <DodCard openModal={(details) => openModal(details)}/>
                     </Top>
-                    <RetroActionsCard />
+                    <RetroActionsCard openModal={(details) => openModal(details)}/>
                 </RightContainer>
             </BoxWrapper>
         </ContentWrapper>
